@@ -1,10 +1,10 @@
 import logo from '../../assets/logo.png';
-import { LogoContainer } from './style';
+import { LogoContainer, LogoImage } from './styles';
 
 export function NavbarLogo(){
     return (
         <LogoContainer href="#">
-            <img src={logo} alt="Logo AVASUS" />
+            <LogoImage src={logo} alt="Logo AVASUS" />
         </LogoContainer>
     );
 };

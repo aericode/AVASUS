@@ -1,5 +1,6 @@
 import { NavbarLogo } from "../NavbarLogo";
-import { NavItem, NavLink, NavList, NavbarContainer } from "./style";
+import { SearchBar } from "../NavbarSearch";
+import { NavItem, NavLink, NavList, NavbarContainer } from "./styles";
 
 export function Navbar(){
     return (
@@ -7,18 +8,25 @@ export function Navbar(){
         <NavbarLogo/>
         <NavList>
           <NavItem>
-            <NavLink href="#">Home</NavLink>
+            <NavLink href="#">Início</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">About</NavLink>
+            <NavLink href="#">Sobre Nós</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Services</NavLink>
+            <NavLink href="#">Cursos</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#">Contact</NavLink>
+            <NavLink href="#">Parceiros</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Transparência</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Contato</NavLink>
           </NavItem>
         </NavList>
+        <SearchBar/>
       </NavbarContainer>
     );
   };
