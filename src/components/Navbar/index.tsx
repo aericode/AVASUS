@@ -1,5 +1,5 @@
 import { NavbarLogo } from "../NavbarLogo";
-import { NavbarSearch, SearchBar } from "../NavbarSearch";
+import { NavbarSearch } from "../NavbarSearch";
 import { NavbarUserMenu } from "../NavbarUserMenu";
 import { NavItem, NavLink, NavList, NavbarContainer } from "./styles";
 
