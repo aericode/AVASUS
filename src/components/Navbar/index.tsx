@@ -1,5 +1,5 @@
 import { NavbarLogo } from "../NavbarLogo";
-import { SearchBar } from "../NavbarSearch";
+import { NavbarSearch, SearchBar } from "../NavbarSearch";
 import { NavItem, NavLink, NavList, NavbarContainer } from "./styles";
 
 export function Navbar(){
@@ -26,7 +26,8 @@ export function Navbar(){
             <NavLink href="#">Contato</NavLink>
           </NavItem>
         </NavList>
-        <SearchBar/>
+        <NavbarSearch/>
+        
       </NavbarContainer>
     );
   };
