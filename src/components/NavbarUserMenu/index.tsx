@@ -3,8 +3,8 @@ import { LoginButton, LogonButton } from "./styles";
 export function NavbarUserMenu() {
     return (
       <div>
-        <LoginButton/>
-        <LogonButton/>
+        <LoginButton> Entrar </LoginButton>
+        <LogonButton> Cadastrar </LogonButton>
       </div>
     );
   }
