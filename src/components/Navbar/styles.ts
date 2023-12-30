@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NavbarContainer = styled.nav`
+export const Container = styled.nav`
   background-color: #FFF;
   padding: 15px;
   color: #fff;
@@ -10,26 +10,3 @@ export const NavbarContainer = styled.nav`
   justify-content: space-between;
 `;
 
-export const NavList = styled.ul`
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-
-  background-color: red;
-`;
-
-export const NavItem = styled.li`
-  margin: 0 10px;
-  font-family: 'Montserrat', sans-serif;
-`;
-
-export const NavLink = styled.a`
-  text-decoration: none;
-  color: #fff;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
