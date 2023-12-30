@@ -23,6 +23,7 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
   margin: 0 10px;
+  font-family: 'Montserrat', sans-serif;
 `;
 
 export const NavLink = styled.a`
