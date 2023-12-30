@@ -22,6 +22,6 @@ export const NavLink = styled.a`
   size: 20px;
   &:hover {
     text-decoration: none;
-    color: #D2202C;
+    color: ${({ theme }) => theme.COLORS.RED_500};
   }
 `;

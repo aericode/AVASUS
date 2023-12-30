@@ -4,7 +4,7 @@ export const LoginButton = styled.button`
   padding: 10px 40px;
   background-color: #fff;
   color: #707070;
-  border: 1px solid #707070;
+  border: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
@@ -17,7 +17,7 @@ export const LoginButton = styled.button`
 
 export const LogonButton = styled.button`
   padding: 10px 35px;
-  background-color: ${({ theme }) => theme.COLORS.gray300};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_300};
   color: #fff;
   border: none;
   border-radius: 20px;
