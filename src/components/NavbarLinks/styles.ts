@@ -21,6 +21,7 @@ export const NavLink = styled.a`
   font-family: 'Montserrat', sans-serif;
   size: 20px;
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #D2202C;
   }
 `;

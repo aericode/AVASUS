@@ -8,16 +8,16 @@ export const LoginButton = styled.button`
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
-  margin-right: 10px;
+  margin-right: 3px;
 
   &:hover {
-    background-color: #2c67f6;
+    opacity: 0.8;
   }
 `;
 
 export const LogonButton = styled.button`
   padding: 10px 35px;
-  background-color: #707070;
+  background-color: ${({ theme }) => theme.COLORS.gray300};
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -25,6 +25,6 @@ export const LogonButton = styled.button`
   font-size: 16px;
 
   &:hover {
-    background-color: #2d8e4f;
+    opacity: 0.8;
   }
 `;
