@@ -1,6 +1,6 @@
 import { NavbarLinks } from "../NavbarLinks";
 import { NavbarLogo } from "../NavbarLogo";
-import { NavbarSandwichMenu } from "../NavbarSandwichMenu";
+import { NavbarSandwichButton } from "../NavbarSandwichButton";
 import { NavbarSearch } from "../NavbarSearch";
 import { NavbarUserMenu } from "../NavbarUserMenu";
 import { Container } from "./styles";
@@ -18,7 +18,7 @@ export function Navbar() {
         :
         <>
           <NavbarSearch />
-          <NavbarSandwichMenu/>
+          <NavbarSandwichButton/>
         </>
         }
 

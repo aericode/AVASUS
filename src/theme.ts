@@ -2,11 +2,13 @@ export const theme = {
     COLORS:{
       GRAY_CARD: "#F5F5F7",
 
+      GRAY_50: "#DCDCDC",
       GRAY_100: "#CCC",
-      GRAY_200: "#434343",
-      GRAY_300: "#707070",
+      GRAY_150: "#D3D3D3",
+      GRAY_200: "#707070",
+      GRAY_250: "#434343",
 
-      //Footer only
+      //Footer colors
       GRAY_500: "#424146",
       GRAY_600: "#323237",
 
