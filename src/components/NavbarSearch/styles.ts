@@ -6,6 +6,7 @@ export const SearchContainer = styled.div`
   min-width: 300px;
   border: 2px solid rgb(0,0,0,0.2);
   border-radius: 20px;
+  height: 40px;
 `;
 
 export const SearchInput = styled.input`

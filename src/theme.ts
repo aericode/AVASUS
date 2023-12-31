@@ -1,6 +1,7 @@
 export const theme = {
     COLORS:{  
       GRAY_300: "#707070",
+      GRAY_800: "#2F2E41",
 
       RED_500: "#D2202C",
 

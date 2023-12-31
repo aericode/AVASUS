@@ -9,6 +9,7 @@ export const LoginButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   margin-right: 3px;
+  height: 40px;
 
   &:hover {
     opacity: 0.8;
@@ -23,6 +24,7 @@ export const LogonButton = styled.button`
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
+  height: 40px;
 
   &:hover {
     opacity: 0.8;
