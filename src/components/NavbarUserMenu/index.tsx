@@ -1,10 +1,10 @@
-import { LoginButton, LogonButton } from "./styles";
+import { Container, LoginButton, LogonButton } from "./styles";
 
 export function NavbarUserMenu() {
     return (
-      <div>
+      <Container>
         <LoginButton> Entrar </LoginButton>
         <LogonButton> Cadastrar </LogonButton>
-      </div>
+      </Container>
     );
   }

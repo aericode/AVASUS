@@ -15,6 +15,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled.a`
+  white-space: nowrap;
   text-decoration: none;
   font-weight: 600;
   color: #2F2E41;

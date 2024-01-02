@@ -18,7 +18,7 @@ export const LoginButton = styled.button`
 
 export const LogonButton = styled.button`
   padding: 10px 35px;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_300};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_200};
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -30,3 +30,7 @@ export const LogonButton = styled.button`
     opacity: 0.8;
   }
 `;
+
+export const Container = styled.div`
+  white-space: nowrap;
+`
