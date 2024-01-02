@@ -5,6 +5,7 @@ export const SandwichButton = styled.button`
   align-items: center;
   justify-content: center;
   width: 45px;
+  min-width: 45px;
   border: 1px solid  ${({ theme }) => theme.COLORS.GRAY_150};
   
   border-radius: 4px;
