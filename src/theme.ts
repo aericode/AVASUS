@@ -1,6 +1,6 @@
 export const theme = {
     COLORS:{
-      GRAY_CARD: "#F5F5F7",
+      SILVER: "#F5F5F7",
 
       GRAY_50: "#DCDCDC",
       GRAY_100: "#CCC",

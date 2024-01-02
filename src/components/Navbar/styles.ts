@@ -8,14 +8,19 @@ export const Container = styled.nav`
 
   height: 40px;
   max-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 `;
 
-export const Wrapper = styled.nav`
+interface WrapperProps {
+  isSmallScreen: boolean;
+}
+
+export const Wrapper = styled.div<WrapperProps>`
   
   display: flex;
-  justify-content: space-between;
-  margin: auto;
-  padding: 0 20px;
-  width: fit-content;
-`;
+  justify-content: space-around;
+  width: ${({ isSmallScreen }) => (isSmallScreen ? '100vw' : 'fit-content')};
+`
