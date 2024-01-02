@@ -7,9 +7,9 @@ interface Props {
   setIsSandwichMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export function NavbarSandwichButton({isSandwichMenuOpen, setIsSandwichMenuOpen}: Props){
+export function NavbarSandwichButton({ isSandwichMenuOpen, setIsSandwichMenuOpen }: Props) {
   return (
-    <SandwichButton onClick={()=>setIsSandwichMenuOpen(!isSandwichMenuOpen)}>
+    <SandwichButton onClick={() => setIsSandwichMenuOpen(!isSandwichMenuOpen)}>
       <FontAwesomeIcon icon={faBars} fontSize={25} />
     </SandwichButton>
   );

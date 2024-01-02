@@ -5,11 +5,11 @@ interface Props {
   isSmallScreen: boolean
 }
 
-export function NavbarSearch({isSmallScreen}:Props) {
-    return (
-      <SearchContainer isSmallScreen={isSmallScreen}>
-        <SearchIcon icon={faSearch} />
-        <SearchInput type="text" placeholder="Busca por um assunto..." />
-      </SearchContainer>
-    );
-  }
+export function NavbarSearch({ isSmallScreen }: Props) {
+  return (
+    <SearchContainer isSmallScreen={isSmallScreen}>
+      <SearchIcon icon={faSearch} />
+      <SearchInput type="text" placeholder="Busca por um assunto..." />
+    </SearchContainer>
+  );
+}

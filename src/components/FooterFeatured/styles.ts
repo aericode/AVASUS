@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 170px;
-    background-color: ${({ theme }) => theme.COLORS.RED_500};
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: 170px;
+  background-color: ${({ theme }) => theme.COLORS.RED_500};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `
 
 export const Logo = styled.img`
@@ -17,10 +17,10 @@ export const Logo = styled.img`
 
 
 export const Wrapper = styled.div`
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
 
 export const StyledText = styled.p`

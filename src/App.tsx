@@ -8,11 +8,11 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <p style={{height: '900px', backgroundColor: 'lightsalmon'}}>
-        
+      <Navbar />
+      <p style={{ height: '900px', backgroundColor: 'lightsalmon' }}>
+
       </p>
-      <Footer/>
+      <Footer />
     </>
   )
 }

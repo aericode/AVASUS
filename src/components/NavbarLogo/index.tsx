@@ -10,9 +10,9 @@ export function NavbarLogo({ isSmallScreen }: Props) {
   return (
     <LogoContainer href="#">
       {isSmallScreen ?
-          <SmallLogoImage src={logoSmall} alt="Logo AVASUS" />
-          :
-          <LogoImage src={logo} alt="Logo AVASUS" /> 
+        <SmallLogoImage src={logoSmall} alt="Logo AVASUS" />
+        :
+        <LogoImage src={logo} alt="Logo AVASUS" />
       }
     </LogoContainer>
   );
