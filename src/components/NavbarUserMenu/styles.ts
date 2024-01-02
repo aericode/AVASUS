@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const LoginButton = styled.button`
   padding: 10px 40px;
-  background-color: #fff;
-  color: #707070;
+  background-color: ${({ theme }) => theme.COLORS.WHITE};
+  color: ${({ theme }) => theme.COLORS.GRAY_200};
   border: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
   border-radius: 20px;
   cursor: pointer;
@@ -19,7 +19,7 @@ export const LoginButton = styled.button`
 export const LogonButton = styled.button`
   padding: 10px 35px;
   background-color: ${({ theme }) => theme.COLORS.GRAY_200};
-  color: #fff;
+  color:  ${({ theme }) => theme.COLORS.WHITE};
   border: none;
   border-radius: 20px;
   cursor: pointer;

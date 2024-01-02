@@ -20,7 +20,7 @@ export const NavLink = styled.a`
   font-weight: 600;
   color:  ${({ theme }) => theme.COLORS.GRAY_250};
   font-family: 'Montserrat', sans-serif;
-  size: 20px;
+  size: ${({ theme }) => theme.FONT_SIZE.LG};
   &:hover {
     text-decoration: none;
     color: ${({ theme }) => theme.COLORS.RED_500};

@@ -1,6 +1,7 @@
 import './App.css'
 import './fonts.css';
 import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer';
 
 
 function App() {
@@ -8,9 +9,10 @@ function App() {
   return (
     <>
       <Navbar/>
-      <p>
-        app
+      <p style={{height: '900px', backgroundColor: 'lightsalmon'}}>
+        
       </p>
+      <Footer/>
     </>
   )
 }

@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SearchContainer, SearchIcon, SearchInput } from "./styles";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 

@@ -8,7 +8,6 @@ interface SearchContainerProps {
 export const SearchContainer = styled.div<SearchContainerProps>`
   display: flex;
   align-items: center;
-  width: 140px;
   border: 2px solid ${({ theme }) => theme.COLORS.GRAY_150};
   border-radius: 20px;
   height: 40px;
