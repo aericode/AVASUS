@@ -9,24 +9,24 @@ import { Container } from "./styles";
 
 export function Navbar() {
   const [isSandwichMenuOpen, setIsSandwichMenuOpen] = useState(true)
-  const [isSmallScreen, setIsSmalScreen] = useState(false)
+  const [isSmallScreen, setIsSmalScreen] = useState(true)
   return (
     <>
       <Container>
         <NavbarLogo />
         {isSmallScreen ?
           <>
-            <NavbarLinks />
-            <NavbarSearch />
-            <NavbarUserMenu />
-          </>
-          :
-          <>
-            <NavbarSearch />
+            <NavbarSearch isSmallScreen={isSmallScreen} />
             <NavbarSandwichButton
               isSandwichMenuOpen={isSandwichMenuOpen}
               setIsSandwichMenuOpen={setIsSandwichMenuOpen}
             />
+          </>
+          :
+          <>
+            <NavbarLinks />
+            <NavbarSearch isSmallScreen={isSmallScreen} />
+            <NavbarUserMenu />
           </>
         }
 

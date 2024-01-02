@@ -1,11 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SearchContainer, SearchInput } from "./styles";
+import { SearchContainer, SearchIcon, SearchInput } from "./styles";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-export function NavbarSearch() {
+interface Props {
+  isSmallScreen: boolean
+}
+
+export function NavbarSearch({isSmallScreen}:Props) {
     return (
-      <SearchContainer>
-        <FontAwesomeIcon icon={faSearch} style={{marginLeft: "10px", color: "#545454"}}/>
+      <SearchContainer isSmallScreen={isSmallScreen}>
+        <SearchIcon icon={faSearch} />
         <SearchInput type="text" placeholder="Busca por um assunto..." />
       </SearchContainer>
     );
