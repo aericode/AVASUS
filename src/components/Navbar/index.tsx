@@ -5,7 +5,7 @@ import { NavbarLogo } from "../NavbarLogo";
 import { NavbarSandwichButton } from "../NavbarSandwichButton";
 import { NavbarSearch } from "../NavbarSearch";
 import { NavbarUserMenu } from "../NavbarUserMenu";
-import { Container } from "./styles";
+import { Container, Wrapper } from "./styles";
 
 export function Navbar() {
   const [isSandwichMenuOpen, setIsSandwichMenuOpen] = useState(true)
@@ -13,23 +13,26 @@ export function Navbar() {
   return (
     <>
       <Container>
-        <NavbarLogo isSmallScreen={isSmallScreen} />
-        {isSmallScreen ?
-          <>
-            <NavbarSearch isSmallScreen={isSmallScreen} />
-            <NavbarSandwichButton
-              isSandwichMenuOpen={isSandwichMenuOpen}
-              setIsSandwichMenuOpen={setIsSandwichMenuOpen}
-            />
-          </>
-          :
-          <>
-            <NavbarLinks />
-            <NavbarSearch isSmallScreen={isSmallScreen} />
-            <NavbarUserMenu />
-          </>
-        }
+        <Wrapper>
 
+          <NavbarLogo isSmallScreen={isSmallScreen} />
+          {isSmallScreen ?
+            <>
+              <NavbarSearch isSmallScreen={isSmallScreen} />
+              <NavbarSandwichButton
+                isSandwichMenuOpen={isSandwichMenuOpen}
+                setIsSandwichMenuOpen={setIsSandwichMenuOpen}
+              />
+            </>
+            :
+            <>
+              <NavbarLinks />
+              <NavbarSearch isSmallScreen={isSmallScreen} />
+              <NavbarUserMenu />
+            </>
+          }
+
+        </Wrapper>
       </Container>
       {(isSmallScreen && isSandwichMenuOpen) && <NavbarDropdown />}
 

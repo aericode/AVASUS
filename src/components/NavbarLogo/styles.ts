@@ -18,6 +18,4 @@ export const SmallLogoImage = styled.img`
   height: 100%;
   max-height: 40px;
   width: auto;
-
-  margin: 0 5px;
 `;

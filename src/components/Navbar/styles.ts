@@ -6,9 +6,16 @@ export const Container = styled.nav`
   color: #fff;
   box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.15);
 
-  display: flex;
-  justify-content: space-between;
   height: 40px;
   max-height: 40px;
+  
 `;
 
+export const Wrapper = styled.nav`
+  
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 0 20px;
+  width: fit-content;
+`;
