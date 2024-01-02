@@ -9,7 +9,7 @@ import { Container } from "./styles";
 
 export function Navbar() {
   const [isSandwichMenuOpen, setIsSandwichMenuOpen] = useState(true)
-  const [isSmallScreen, setIsSmalScreen] = useState(true)
+  const [isSmallScreen, setIsSmalScreen] = useState(false)
   return (
     <>
       <Container>
@@ -31,7 +31,7 @@ export function Navbar() {
         }
 
       </Container>
-      {(isSandwichMenuOpen) && <NavbarDropdown />}
+      {(isSmallScreen && isSandwichMenuOpen) && <NavbarDropdown />}
 
     </>
   );
