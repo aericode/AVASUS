@@ -13,11 +13,9 @@ interface DropdownListProps {
   
 export const DropdownList = styled.ul<DropdownListProps>`
   position: absolute;
-  top: -20px;
-
-  margin: auto;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  top: -14px;
+  background-color: ${({ theme }) => theme.COLORS.WHITE};
+  border: 1px solid ${({ theme }) => theme.COLORS.GRAY_150};;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -30,10 +28,11 @@ export const DropdownItem = styled.li`
   padding: 8px 12px;
   width: 100vw;
   cursor: pointer;
-
+  border-bottom:  1px solid  ${({ theme }) => theme.COLORS.GRAY_150};
   text-align: center;
+  
 
   &:hover {
-    background-color: #f5f5f5;
+    background-color: ${({ theme }) => theme.COLORS.GRAY_50};
   }
 `;

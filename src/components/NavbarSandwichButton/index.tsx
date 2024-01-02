@@ -3,9 +3,14 @@ import logo from '../../assets/logo.png';
 import { SandwichButton } from './styles';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-export function NavbarSandwichButton() {
+interface NavbarSandwichButtonProps {
+  isSandwichMenuOpen: boolean,
+  setIsSandwichMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export function NavbarSandwichButton({isSandwichMenuOpen, setIsSandwichMenuOpen}: NavbarSandwichButtonProps){
   return (
-    <SandwichButton>
+    <SandwichButton onClick={()=>setIsSandwichMenuOpen(!isSandwichMenuOpen)}>
       <FontAwesomeIcon icon={faBars} fontSize={25} />
     </SandwichButton>
   );
