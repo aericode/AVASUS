@@ -1,10 +1,19 @@
 import logo from '../../assets/logo.png';
-import { LogoContainer, LogoImage } from './styles';
+import logoSmall from '../../assets/logo-small.png';
+import { LogoContainer, LogoImage, SmallLogoImage } from './styles';
 
-export function NavbarLogo() {
+interface Props {
+  isSmallScreen: boolean
+}
+
+export function NavbarLogo({ isSmallScreen }: Props) {
   return (
     <LogoContainer href="#">
-      <LogoImage src={logo} alt="Logo AVASUS" />
+      {isSmallScreen ?
+          <SmallLogoImage src={logoSmall} alt="Logo AVASUS" />
+          :
+          <LogoImage src={logo} alt="Logo AVASUS" /> 
+      }
     </LogoContainer>
   );
 };

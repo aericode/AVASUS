@@ -12,3 +12,12 @@ export const LogoImage = styled.img`
 
   margin: 0 15px;
 `;
+
+export const SmallLogoImage = styled.img`
+  display: inline-block;
+  height: 100%;
+  max-height: 40px;
+  width: auto;
+
+  margin: 0 5px;
+`;

@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <>
       <Container>
-        <NavbarLogo />
+        <NavbarLogo isSmallScreen={isSmallScreen} />
         {isSmallScreen ?
           <>
             <NavbarSearch isSmallScreen={isSmallScreen} />

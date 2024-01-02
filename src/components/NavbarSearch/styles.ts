@@ -15,7 +15,7 @@ export const SearchContainer = styled.div<SearchContainerProps>`
 
   margin: 0 10px;
 
-  width: ${({ isSmallScreen }) => (isSmallScreen ? '75%' : 'auto')};
+  width: ${({ isSmallScreen }) => (isSmallScreen ? '85%' : 'auto')};
 `;
 
 export const SearchInput = styled.input`

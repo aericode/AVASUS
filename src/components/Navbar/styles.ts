@@ -8,5 +8,7 @@ export const Container = styled.nav`
 
   display: flex;
   justify-content: space-between;
+  height: 40px;
+  max-height: 40px;
 `;
 
