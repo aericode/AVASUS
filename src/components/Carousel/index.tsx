@@ -28,6 +28,7 @@ export function ImageCarousel() {
       partialVisible={true} // Set this to true for partial visibility
       containerClass="carousel-container" // Optional CSS class for the carousel container
       showDots={true}
+      infinite={true}
     >
       {/* Add your image components here */}
       <img src={logoLAIS} alt="Image 1" />
