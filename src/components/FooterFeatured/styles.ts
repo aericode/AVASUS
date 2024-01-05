@@ -17,7 +17,7 @@ export const Logo = styled.img`
   display: inline-block;
   height: 55px;
   width: auto;
-  padding: 10px
+  padding: 10px;
 `;
 
 
@@ -36,5 +36,5 @@ export const StyledText = styled.p`
   font-family: 'Montserrat', sans-serif;
   size: ${({ theme }) => theme.FONT_SIZE.XL};
 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 `
