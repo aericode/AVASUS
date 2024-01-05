@@ -2,11 +2,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logoLAIS from '../../assets/logo-lais.png';
 import { Container, StyledHeader, LinkList, ListItem, LogoLAIS, Section, StyledLink, TextLais, Wrapper, SocialLinkContainer, StyledFontAwesomeIcon } from "./styles";
 import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { useScreen } from '../../contexts/ScreenSizeContext';
 
 export function FooterLinks() {
+  const { isSmallScreen } = useScreen();
+
   return (
     <Container>
-      <Wrapper>
+      <Wrapper isSmallScreen = {isSmallScreen}>
         <Section>
           <LogoLAIS src={logoLAIS} />
           <TextLais>

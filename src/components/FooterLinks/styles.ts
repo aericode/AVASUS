@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
+type ScreenProps = {
+  isSmallScreen: boolean
+}
+
 export const Container = styled.div`
-  height: 300px;
   background-color: ${({ theme }) => theme.COLORS.GRAY_600};
   display: flex;
   justify-content: center;
@@ -10,9 +13,9 @@ export const Container = styled.div`
   flex-direction: column;
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<ScreenProps>`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({ isSmallScreen }) => isSmallScreen ? 'column' : 'row'};
   max-width: 900px;
   height: fit-content;
   justify-content: space-between;
@@ -46,7 +49,7 @@ export const LinkList = styled.ul`
   list-style: none;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 0px;
 `;
 
 export const ListItem = styled.li`
@@ -71,7 +74,7 @@ export const Section = styled.div`
   display: flex;
   width: 200px;
   flex-direction: column;
-  margin: 0 40px;
+  margin: 15px 40px;
 `;
 
 export const SocialLinkContainer = styled.div`
