@@ -6,8 +6,7 @@ export const LogoContainer = styled.a`
 
 export const LogoImage = styled.img`
   display: inline-block;
-  height: 100%;
-  max-height: 40px;
+  height: 44px;
   width: auto;
 
   margin: 0 15px;

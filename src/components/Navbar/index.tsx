@@ -19,7 +19,7 @@ export function Navbar() {
   
   return (
     <>
-      <Container>
+      <Container isSmallScreen={isSmallScreen}>
         <Wrapper isSmallScreen={isSmallScreen}>
 
           <NavbarLogo />
