@@ -9,7 +9,7 @@ export const LogoImage = styled.img`
   height: 44px;
   width: auto;
 
-  margin: 0 15px;
+  padding-right: 40px;
 `;
 
 export const SmallLogoImage = styled.img`
