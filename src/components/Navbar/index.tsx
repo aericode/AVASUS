@@ -6,24 +6,12 @@ import { NavbarSandwichButton } from "../NavbarSandwichButton";
 import { NavbarSearch } from "../NavbarSearch";
 import { NavbarUserMenu } from "../NavbarUserMenu";
 import { Container, Wrapper } from "./styles";
+import { useScreen } from "../../contexts/ScreenSizeContext";
 
 export function Navbar() {
   const [isSandwichMenuOpen, setIsSandwichMenuOpen] = useState(true)
-  const [isSmallScreen, setIsSmalScreen] = useState(false)
 
-  useEffect(() => {
-    setIsSandwichMenuOpen(false)
-
-    const handleResize = () => {
-      const isSmall = window.matchMedia('(max-width: 1350px)').matches;
-      setIsSmalScreen(isSmall);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const { isSmallScreen } = useScreen();
 
   useEffect(() => {
     setIsSandwichMenuOpen(false)
@@ -34,10 +22,10 @@ export function Navbar() {
       <Container>
         <Wrapper isSmallScreen={isSmallScreen}>
 
-          <NavbarLogo isSmallScreen={isSmallScreen} />
+          <NavbarLogo />
           {isSmallScreen ?
             <>
-              <NavbarSearch isSmallScreen={isSmallScreen} />
+              <NavbarSearch />
               <NavbarSandwichButton
                 isSandwichMenuOpen={isSandwichMenuOpen}
                 setIsSandwichMenuOpen={setIsSandwichMenuOpen}
@@ -46,7 +34,7 @@ export function Navbar() {
             :
             <>
               <NavbarLinks />
-              <NavbarSearch isSmallScreen={isSmallScreen} />
+              <NavbarSearch />
               <NavbarUserMenu />
             </>
           }

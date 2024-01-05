@@ -1,12 +1,11 @@
 import logo from '../../assets/logo.png';
 import logoSmall from '../../assets/logo-small.png';
 import { LogoContainer, LogoImage, SmallLogoImage } from './styles';
+import { useScreen } from '../../contexts/ScreenSizeContext';
 
-interface Props {
-  isSmallScreen: boolean
-}
 
-export function NavbarLogo({ isSmallScreen }: Props) {
+export function NavbarLogo() {
+  const { isSmallScreen } = useScreen();
   return (
     <LogoContainer href="#">
       {isSmallScreen ?
