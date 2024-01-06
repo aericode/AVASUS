@@ -2,23 +2,24 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 import logoLAIS from '../../assets/logo.png';
+import { CarouselImage } from './styles';
 
 export function ImageCarousel() {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
-      partialVisibilityGutter: 40 // Adjust this value for partial visibility
+      partialVisibilityGutter: 40 
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
-      partialVisibilityGutter: 30 // Adjust this value for partial visibility
+      partialVisibilityGutter: 30 
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      partialVisibilityGutter: 30 // Adjust this value for partial visibility
+      partialVisibilityGutter: 30 
     }
   };
 
@@ -30,11 +31,9 @@ export function ImageCarousel() {
       showDots={true}
       infinite={true}
     >
-      {/* Add your image components here */}
-      <img src={logoLAIS} alt="Image 1" />
-      <img src={logoLAIS} alt="Image 2" />
-      <img src={logoLAIS} alt="Image 3" />
-      {/* Add more images as needed */}
+      <CarouselImage src={logoLAIS} alt="Image 1" />
+      <CarouselImage src={logoLAIS} alt="Image 1" />
+      <CarouselImage src={logoLAIS} alt="Image 1" />
     </Carousel>
   );
 };

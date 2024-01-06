@@ -15,12 +15,15 @@ export const Container = styled.nav<ScreenProps>`
   align-items: center;
 
   height: ${({ isSmallScreen }) => (isSmallScreen ? '40px' : '100px')};
-  
+
+  position: fixed;
+  z-index: 10000;
+  width: 100vw;
 `;
 
 export const Wrapper = styled.div<ScreenProps>`
   
   display: flex;
   justify-content: space-around;
-  width: ${({ isSmallScreen }) => (isSmallScreen ? '100vw' : 'fit-content')};
+  width: ${({ isSmallScreen }) => (isSmallScreen ? '80vw' : 'fit-content')};
 `

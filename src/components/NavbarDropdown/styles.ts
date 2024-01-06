@@ -12,8 +12,10 @@ interface DropdownListProps {
   }
   
 export const DropdownList = styled.ul<DropdownListProps>`
-  position: absolute;
-  top: -14px;
+  position: fixed;
+  z-index: 10000;
+  top: 70px;
+ 
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   border: 1px solid ${({ theme }) => theme.COLORS.GRAY_150};;
   padding: 0;

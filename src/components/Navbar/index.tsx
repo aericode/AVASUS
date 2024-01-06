@@ -36,12 +36,13 @@ export function Navbar() {
               <NavbarLinks />
               <NavbarSearch />
               <NavbarUserMenu />
+
             </>
           }
 
         </Wrapper>
       </Container>
-      {(isSmallScreen && isSandwichMenuOpen) && <NavbarDropdown />}
+          {(isSmallScreen && isSandwichMenuOpen) && <NavbarDropdown />}
 
     </>
   );
