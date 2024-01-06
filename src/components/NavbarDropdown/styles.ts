@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 
 export const DropdownContainer = styled.div`
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  z-index: 10000;
 `;
 
 
@@ -12,9 +12,7 @@ interface DropdownListProps {
   }
   
 export const DropdownList = styled.ul<DropdownListProps>`
-  position: fixed;
-  z-index: 10000;
-  top: 70px;
+
  
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   border: 1px solid ${({ theme }) => theme.COLORS.GRAY_150};;

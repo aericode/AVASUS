@@ -16,7 +16,7 @@ export const Container = styled.nav<ScreenProps>`
 
   height: ${({ isSmallScreen }) => (isSmallScreen ? '40px' : '100px')};
 
-  position: fixed;
+  position: sticky;
   z-index: 10000;
   width: 100vw;
 `;
