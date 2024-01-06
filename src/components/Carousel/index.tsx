@@ -9,25 +9,25 @@ export function ImageCarousel() {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
-      partialVisibilityGutter: 40 
+      partialVisibilityGutter: 0 
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
-      partialVisibilityGutter: 30 
+      partialVisibilityGutter: 0 
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      partialVisibilityGutter: 30 
+      partialVisibilityGutter: 0 
     }
   };
 
   return (
     <Carousel
       responsive={responsive}
-      partialVisible={true} // Set this to true for partial visibility
-      containerClass="carousel-container" // Optional CSS class for the carousel container
+      partialVisible={true}
+      containerClass="carousel-container"
       showDots={true}
       infinite={true}
     >
