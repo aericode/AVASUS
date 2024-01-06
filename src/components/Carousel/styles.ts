@@ -2,5 +2,5 @@ import styled from "styled-components";
 
 export const CarouselImage = styled.img`
 width: 100%;
-height: 760px;
+height: 40vh;
 `

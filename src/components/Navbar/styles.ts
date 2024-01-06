@@ -18,7 +18,7 @@ export const Container = styled.nav<ScreenProps>`
 
   position: sticky;
   z-index: 10000;
-  width: 100vw;
+  width: auto;
 `;
 
 export const Wrapper = styled.div<ScreenProps>`
