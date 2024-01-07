@@ -14,7 +14,7 @@ export const SearchContainer = styled.div<SearchContainerProps>`
 
   margin: 0 10px;
 
-  width: ${({ isSmallScreen }) => (isSmallScreen ? '65vw' : '20vw')};
+  width: ${({ isSmallScreen }) => (isSmallScreen ? '65vw' : '15vw')};
   overflow: hidden;
 `;
 
