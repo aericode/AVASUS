@@ -19,6 +19,7 @@ export const Container = styled.nav<ScreenProps>`
   z-index: 10000;
   width: auto;
   top: 0;
+  overflow: hidden;
 `;
 
 export const Wrapper = styled.div<ScreenProps>`
