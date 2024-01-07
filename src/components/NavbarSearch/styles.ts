@@ -27,5 +27,6 @@ export const SearchInput = styled.input`
 
 export const SearchIcon = styled(FontAwesomeIcon)`
   margin-left: 10px;
-  color: ${({ theme }) => theme.COLORS.GRAY_500};;
+  color: ${({ theme }) => theme.COLORS.GRAY_500};
+  cursor: pointer;
 `;
