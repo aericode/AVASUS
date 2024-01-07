@@ -1,6 +1,26 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: red;
   height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+`;
+
+export const Wrapper = styled.div`
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  background-color: blue;
+  height: 350px;
+`;
+
+
+export const StyledTitle = styled.h1`
+  text-align: center;
+  color:  ${({ theme }) => theme.COLORS.RED_500};
+  font-size:  ${({ theme }) => theme.FONT_SIZE.XL2};
+  font-weight:  ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
+  font-family: 'Montserrat', sans-serif;
 `;
