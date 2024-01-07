@@ -43,8 +43,6 @@ export const DataProvider: React.FC<DataProviderType> = ({ children }) => {
     fetchData();
   }, []);
 
-  console.log(cursosData, parceirosData, transparenciaData)
-
   const contextValue: DataContextProps = {
     cursosData,
     parceirosData,
