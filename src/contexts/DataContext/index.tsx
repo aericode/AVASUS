@@ -35,8 +35,6 @@ export const DataProvider: React.FC<DataProviderType> = ({ children }) => {
         setParceirosData(parceirosJson);
         setTransparenciaData(transparenciaJson);
 
-        console.log(cursosData, parceirosData, transparenciaData)
-
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -44,6 +42,8 @@ export const DataProvider: React.FC<DataProviderType> = ({ children }) => {
 
     fetchData();
   }, []);
+
+  console.log(cursosData, parceirosData, transparenciaData)
 
   const contextValue: DataContextProps = {
     cursosData,
