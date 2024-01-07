@@ -4,9 +4,9 @@ import { Parceiro } from '../../types/parceiro';
 import { Transparencia } from '../../types/transparencia';
 
 interface DataContextProps {
-  cursosData: Curso[];
-  parceirosData: Parceiro[];
-  transparenciaData: Transparencia[];
+  cursosData?: Curso[];
+  parceirosData?: Parceiro[];
+  transparenciaData?: Transparencia[];
 }
 
 type DataProviderType = {
@@ -16,9 +16,9 @@ type DataProviderType = {
 export const DataContext = createContext<DataContextProps>({} as DataContextProps);
 
 export const DataProvider: React.FC<DataProviderType> = ({ children }) => {
-  const [cursosData, setCursosData] = useState<Curso[]>([]);
-  const [parceirosData, setParceirosData] = useState<Parceiro[]>([]);
-  const [transparenciaData, setTransparenciaData] = useState<Transparencia[]>([]);
+  const [cursosData, setCursosData] = useState<Curso[]>();
+  const [parceirosData, setParceirosData] = useState<Parceiro[]>();
+  const [transparenciaData, setTransparenciaData] = useState<Transparencia[]>();
 
   useEffect(() => {
     const fetchData = async () => {

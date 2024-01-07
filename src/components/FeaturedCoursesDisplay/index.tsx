@@ -9,9 +9,10 @@ export function FeaturedCourseDisplay () {
   return(
     <Container>
         <StyledTitle>Módulos Educacionais</StyledTitle>
-        <p>{cursosData[0].titulo}</p>
-        <p>{cursosData[1].titulo}</p>
-        <p>{cursosData[2].titulo}</p>
+        <p>{cursosData && cursosData[0].titulo}</p>
+        <p>{cursosData && cursosData[1].titulo}</p>
+        <p>{cursosData && cursosData[2].titulo}</p>
+        <p>{cursosData &&  Number(cursosData[2].avaliacao) + 2}</p>
       <FeaturedCourse/>
     </Container>
   )
