@@ -4,7 +4,8 @@ import styled from "styled-components";
 export const CarouselImage = styled.img`
   width: 100%;
   height: auto;
-  object-fit: cover; 
+  object-fit: cover;
+  min-height: 400px;
 `
 
 export const StyledCarousel = styled(Carousel)`
