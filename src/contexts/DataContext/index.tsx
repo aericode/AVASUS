@@ -1,50 +1,42 @@
-import { createContext, useState, useEffect, FC, ReactNode } from 'react';
-
-interface Course {
-  id: number;
-  name: string;
-}
-
-interface Partner {
-  id: number;
-  name: string;
-}
-
-interface Transparency {
-  id: number;
-}
+import { createContext, useState, useEffect, ReactNode } from 'react';
+import { Curso } from '../../types/curso';
+import { Parceiro } from '../../types/parceiro';
+import { Transparencia } from '../../types/transparencia';
 
 interface DataContextProps {
-  cursosData: Course[];
-  parceirosData: Partner[];
-  transparenciaData: Transparency[];
+  cursosData: Curso[];
+  parceirosData: Parceiro[];
+  transparenciaData: Transparencia[];
 }
 
 type DataProviderType = {
   children: ReactNode;
 };
 
-export const DataContext = createContext<DataContextProps | undefined>(undefined);
+export const DataContext = createContext<DataContextProps>({} as DataContextProps);
 
-export const DataProvider: React.FC<DataProviderType> = ({ children } : any) => {
-  const [cursosData, setCursosData] = useState<Course[]>([]);
-  const [parceirosData, setParceirosData] = useState<Partner[]>([]);
-  const [transparenciaData, setTransparenciaData] = useState<Transparency[]>([]);
+export const DataProvider: React.FC<DataProviderType> = ({ children }) => {
+  const [cursosData, setCursosData] = useState<Curso[]>([]);
+  const [parceirosData, setParceirosData] = useState<Parceiro[]>([]);
+  const [transparenciaData, setTransparenciaData] = useState<Transparencia[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const cursosResponse = await fetch('http://localhost:3004/cursos');
-        const parceirosResponse = await fetch('http://localhost:3004/parceiros');
-        const transparenciaResponse = await fetch('http://localhost:3004/transparencia');
+        const cursosResponse = await fetch('http://localhost:3004/cursos/');
+        const parceirosResponse = await fetch('http://localhost:3004/parceiros/');
+        const transparenciaResponse = await fetch('http://localhost:3004/transparecia/');
 
-        const cursosJson = await cursosResponse.json() as Course[];
-        const parceirosJson = await parceirosResponse.json() as Partner[];
-        const transparenciaJson = await transparenciaResponse.json() as Transparency[];
+        const cursosJson = await cursosResponse.json() as Curso[];
+        const parceirosJson = await parceirosResponse.json() as Parceiro[];
+        const transparenciaJson = await transparenciaResponse.json() as Transparencia[];
 
         setCursosData(cursosJson);
         setParceirosData(parceirosJson);
         setTransparenciaData(transparenciaJson);
+
+        console.log(cursosData, parceirosData, transparenciaData)
+
       } catch (error) {
         console.error('Error fetching data:', error);
       }
