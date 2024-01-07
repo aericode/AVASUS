@@ -10,10 +10,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <p style={{ height: '900px', backgroundColor: 'lightsalmon' }}>
+      <>
         <ImageCarousel />
 
-      </p>
+      </>
       <Footer />
     </>
   )

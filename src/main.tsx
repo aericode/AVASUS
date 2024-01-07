@@ -4,13 +4,16 @@ import App from './App.tsx'
 import './index.css'
 import ThemeContext from './contexts/ThemeContext';
 import { ScreenProvider } from './contexts/ScreenSizeContext/index.tsx';
+import { DataProvider } from './contexts/DataContext/index.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeContext>
-      <ScreenProvider>
-        <App />
-      </ScreenProvider>
+      <DataProvider>
+        <ScreenProvider>
+          <App />
+        </ScreenProvider>
+      </DataProvider>
     </ThemeContext>
   </React.StrictMode>,
 )

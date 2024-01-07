@@ -21,6 +21,7 @@ export const SearchInput = styled.input`
   border: none;
   outline: none;
   padding: 5px;
+  width: 90%;
 `;
 
 export const SearchIcon = styled(FontAwesomeIcon)`
