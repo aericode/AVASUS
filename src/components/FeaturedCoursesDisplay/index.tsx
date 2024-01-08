@@ -1,12 +1,33 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FeaturedCourse } from "../FeaturedCourse";
-import { Container, StyledTitle } from "./styles";
+import { ButtonContainer, Container, StyledButton, StyledTitle } from "./styles";
 import { DataContext } from "../../contexts/DataContext";
 import { Curso } from "../../types/curso";
+import { useScreen } from "../../contexts/ScreenSizeContext";
 
 export function FeaturedCourseDisplay() {
   const { cursosData } = useContext(DataContext)!;
-  
+  const { isSmallScreen } = useScreen();
+  const [selectedFilter, setSelectedFilter] = useState<"popular" | "rating" | "recent">("popular")
+
+  useEffect(() => {
+    let ratingFunction;
+    switch (selectedFilter) {
+      case "popular":
+        ratingFunction = sortByEnrollment;
+        break;
+      case "rating":
+        ratingFunction = sortByRating;
+        break;
+      case "recent":
+        ratingFunction = sortByDate;
+        break;
+      default:
+        ratingFunction = sortByEnrollment;
+    }
+    setDisplayedCourses(getDisplayedCourses(ratingFunction));
+  }, [selectedFilter]);
+
   const sortByEnrollment = (a: Curso, b: Curso) => b.matriculados - a.matriculados
   const sortByRating = (a: Curso, b: Curso) => Number(b.avaliacao) - Number(a.avaliacao)
   const sortByDate = (a: Curso, b: Curso) => {
@@ -14,20 +35,35 @@ export function FeaturedCourseDisplay() {
     const dateB = new Date(b.criado_em).getTime();
     return dateB - dateA;
   }
-  
-  function getDisplayedCourses(sortingFunction : (a: Curso, b: Curso) => number){
-    return cursosData ? cursosData.slice(0,3).sort(sortingFunction) : [];
+
+  function getDisplayedCourses(sortingFunction: (a: Curso, b: Curso) => number) {
+    return cursosData ? cursosData.slice(0, 3).sort(sortingFunction) : [];
   }
 
   const [displayedCourses, setDisplayedCourses] = useState(getDisplayedCourses(sortByEnrollment))
 
-  
+
   return (
     <Container>
-      <button onClick={() => setDisplayedCourses(getDisplayedCourses(sortByEnrollment))}>Sort by Enrollment</button>
-      <button onClick={() => setDisplayedCourses(getDisplayedCourses(sortByRating))}>Sort by Rating</button>
-      <button onClick={() => setDisplayedCourses(getDisplayedCourses(sortByDate))}>Show Recent</button>
       <StyledTitle>Módulos Educacionais</StyledTitle>
+      <ButtonContainer isSmallScreen={isSmallScreen}>
+        <StyledButton
+          onClick={() => setSelectedFilter("popular")}
+          isActive={selectedFilter === "popular"}
+        >
+          Mais Populares
+        </StyledButton>
+        <StyledButton
+          onClick={() => setSelectedFilter("rating")}
+          isActive={selectedFilter === "rating"}>
+          Mais bem Avaliados
+        </StyledButton>
+        <StyledButton
+          onClick={() => setSelectedFilter("recent")}
+          isActive={selectedFilter === "recent"}>
+          Mais Recentes
+        </StyledButton>
+      </ButtonContainer>
       {displayedCourses.map((curso, index) => (
         <FeaturedCourse key={index} curso={curso} />
       ))}
