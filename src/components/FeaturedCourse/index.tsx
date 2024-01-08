@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Curso } from "../../types/curso";
 import { ContentCard } from "../ContentCard";
-import { CoursePartners, CourseTitle, TextWrapper, Thumbnail, Wrapper } from "./styles";
+import { CoursePartners, CourseTitle, InfoWrapper, TextWrapper, Thumbnail, Wrapper } from "./styles";
+import { faClock, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 
 interface FeaturedCourseProps {
   curso: Curso;
@@ -19,6 +21,15 @@ export function FeaturedCourse({ curso }: FeaturedCourseProps) {
             {curso.parceiros}
           </CoursePartners>
         </TextWrapper>
+        <InfoWrapper>
+          <FontAwesomeIcon icon={faUserGroup} />
+          <p>{curso.matriculados}</p>
+          <FontAwesomeIcon icon={faClock} />
+          <p>{curso.duracao}</p>
+          <p>{curso.avaliacao}</p>
+
+
+        </InfoWrapper>
       </Wrapper>
     </ContentCard>
   )

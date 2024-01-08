@@ -9,10 +9,9 @@ export function FeaturedCourseDisplay() {
   return (
     <Container>
       <StyledTitle>Módulos Educacionais</StyledTitle>
-      <p>oi</p>
       {cursosData &&
         <>
-          <FeaturedCourse curso={cursosData[0]} />
+          <FeaturedCourse curso={cursosData[1]} />
           
         </>
       }

@@ -9,7 +9,7 @@ import { MainMenuEducationalModules } from './components/MainMenuEducationalModu
 function App() {
 
   return (
-    <>
+    <div className="App">
       <Navbar />
       <>
         <ImageCarousel />
@@ -17,7 +17,7 @@ function App() {
 
       </>
       <Footer />
-    </>
+    </div>
   )
 }
 
