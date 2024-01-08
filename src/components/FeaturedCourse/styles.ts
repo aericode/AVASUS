@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-interface WrapperProps{
-   isSmallScreen: boolean
-}
 
 export const Container = styled.div`
 margin:  10px 0;
 `
+interface WrapperProps{
+   isSmallScreen: boolean
+}
 
 export const Wrapper = styled.div<WrapperProps>`
    display: flex;
@@ -75,7 +75,7 @@ export const SeeModuleButton = styled.button`
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.FONT_SIZE.SM};
   height: 40px;
 
   &:hover {
@@ -90,3 +90,18 @@ export const SeeModuleText = styled.p`
   color:  ${({ theme }) => theme.COLORS.WHITE};
   white-space: nowrap;
 `
+
+export const SeeMoreButton = styled.button`
+  padding: 10px 35px;
+  background-color: ${({ theme }) => theme.COLORS.GRAY_200};
+  font-size: ${({ theme }) => theme.FONT_SIZE.XL};
+  color:  ${({ theme }) => theme.COLORS.WHITE};
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 40px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;

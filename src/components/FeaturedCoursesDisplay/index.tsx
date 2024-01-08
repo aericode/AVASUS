@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { FeaturedCourse } from "../FeaturedCourse";
-import { ButtonContainer, Container, StyledButton, StyledTitle } from "./styles";
+import { ButtonContainer, Container, SeeMoreButton, SeeMoreButtonWrapper, StyledButton, StyledTitle } from "./styles";
 import { DataContext } from "../../contexts/DataContext";
 import { Curso } from "../../types/curso";
 import { useScreen } from "../../contexts/ScreenSizeContext";
@@ -37,7 +37,7 @@ export function FeaturedCourseDisplay() {
   }
 
   function getDisplayedCourses(sortingFunction: (a: Curso, b: Curso) => number) {
-    return cursosData ? cursosData.slice(0, 3).sort(sortingFunction) : [];
+    return cursosData ? cursosData.sort(sortingFunction).slice(0, 3) : [];
   }
 
   const [displayedCourses, setDisplayedCourses] = useState(getDisplayedCourses(sortByEnrollment))
@@ -67,6 +67,9 @@ export function FeaturedCourseDisplay() {
       {displayedCourses.map((curso, index) => (
         <FeaturedCourse key={index} curso={curso} />
       ))}
+      <SeeMoreButtonWrapper>
+        <SeeMoreButton> Ver Mais </SeeMoreButton>
+      </SeeMoreButtonWrapper>
     </Container>
   );
 }

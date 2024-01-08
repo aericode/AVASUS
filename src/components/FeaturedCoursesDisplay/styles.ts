@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  margin-top: 90px;
   height: fit-content;
 `;
 
@@ -17,7 +18,8 @@ interface ButtonContainerProps {
 
 export const ButtonContainer = styled.div<ButtonContainerProps>`
   display: flex;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
   flex-direction: ${({ isSmallScreen }) => isSmallScreen ? "column": "row"};
 `;
 
@@ -38,4 +40,31 @@ export const StyledButton = styled.button<StyledButtonProps>`
 
   border-bottom : ${({ isActive }) => isActive ? "3px solid" : "0px" };
 
+`;
+export const SeeMoreButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+`;
+
+export const SeeMoreButton = styled.button`
+  margin-top: 60px;
+
+  width: 80vw;
+  max-width: 350px;
+
+  padding: 10px 35px;
+  background-color: ${({ theme }) => theme.COLORS.GRAY_200};
+  font-size: ${({ theme }) => theme.FONT_SIZE.XL};
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
+  color:  ${({ theme }) => theme.COLORS.WHITE};
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 50px;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
