@@ -33,7 +33,7 @@ export const TextWrapper = styled.div`
    display: flex;
    flex-direction: column;
    width: fit-content;
-   width: 270px;
+   width: 50vw;
    max-width: 270px;
    height: auto;
    justify-content: space-evenly;

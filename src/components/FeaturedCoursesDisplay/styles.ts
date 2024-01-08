@@ -29,7 +29,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
   border: none;
   background: none;
   padding: 10px 15px;
-  font-size: 16px;
   cursor: pointer;
   color:  ${({ isActive, theme }) => isActive ? theme.COLORS.GRAY_200 : theme.COLORS.GRAY_800};
 
