@@ -12,7 +12,9 @@ export function FeaturedCourseDisplay() {
       {cursosData &&
         <>
           <FeaturedCourse curso={cursosData[0]} />
-          
+          <FeaturedCourse curso={cursosData[1]} />          
+          <FeaturedCourse curso={cursosData[2]} />
+
         </>
       }
       {/* <p>{cursosData && Number(cursosData[2].avaliacao) + 2}</p> */}
