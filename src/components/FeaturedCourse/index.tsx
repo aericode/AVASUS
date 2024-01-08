@@ -1,8 +1,10 @@
-import { Container } from "./styles";
+import { ContentCard } from "../ContentCard";
 
 export function FeaturedCourse() {
   return(
-    <Container>
-    </Container>
+    <ContentCard>
+      <>
+      </>
+    </ContentCard>
   )
 }
