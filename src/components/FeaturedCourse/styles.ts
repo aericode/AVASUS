@@ -4,6 +4,10 @@ interface WrapperProps{
    isSmallScreen: boolean
 }
 
+export const Container = styled.div`
+margin:  10px 0;
+`
+
 export const Wrapper = styled.div<WrapperProps>`
    display: flex;
    flex-direction: ${({ isSmallScreen }) => isSmallScreen ? "column": "row"};
