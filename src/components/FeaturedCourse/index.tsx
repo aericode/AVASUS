@@ -3,6 +3,7 @@ import { Curso } from "../../types/curso";
 import { ContentCard } from "../ContentCard";
 import { CoursePartners, CourseTitle, InfoWrapper, TextWrapper, Thumbnail, Wrapper } from "./styles";
 import { faClock, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { StarRating } from "../StarRating";
 
 interface FeaturedCourseProps {
   curso: Curso;
@@ -26,7 +27,7 @@ export function FeaturedCourse({ curso }: FeaturedCourseProps) {
           <p>{curso.matriculados}</p>
           <FontAwesomeIcon icon={faClock} />
           <p>{curso.duracao}</p>
-          <p>{curso.avaliacao}</p>
+          <StarRating rating={curso.avaliacao}/>
 
 
         </InfoWrapper>

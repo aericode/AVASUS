@@ -44,7 +44,7 @@ export const CoursePartners = styled.p`
 export const InfoWrapper = styled.div`
    display: flex;
    flex-direction: row;
-   max-width: 280px;
+   align-items: center;
    height: 100px;
    justify-content: space-evenly;
    padding: 0 10px;
