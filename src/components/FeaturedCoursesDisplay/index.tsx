@@ -11,7 +11,7 @@ export function FeaturedCourseDisplay() {
       <StyledTitle>Módulos Educacionais</StyledTitle>
       {cursosData &&
         <>
-          <FeaturedCourse curso={cursosData[1]} />
+          <FeaturedCourse curso={cursosData[0]} />
           
         </>
       }

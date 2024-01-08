@@ -33,7 +33,6 @@ export const Wrapper = styled.div<ScreenProps>`
 export const StyledText = styled.p`
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
   color:  ${({ theme }) => theme.COLORS.WHITE};
-  font-family: 'Montserrat', sans-serif;
   size: ${({ theme }) => theme.FONT_SIZE.XL};
 
   margin-bottom: 10px;

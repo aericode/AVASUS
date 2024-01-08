@@ -9,5 +9,4 @@ export const StyledTitle = styled.h1`
   color:  ${({ theme }) => theme.COLORS.RED_500};
   font-size:  ${({ theme }) => theme.FONT_SIZE.XL2};
   font-weight:  ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
-  font-family: 'Montserrat', sans-serif;
 `;

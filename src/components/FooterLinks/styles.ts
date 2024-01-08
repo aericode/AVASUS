@@ -33,7 +33,6 @@ export const LogoLAIS = styled.img`
 export const TextLais = styled.p`
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};
   color:  ${({ theme }) => theme.COLORS.WHITE};
-  font-family: 'Montserrat', sans-serif;
   size: ${({ theme }) => theme.FONT_SIZE.SM};
   white-space: pre-line;
 `;
@@ -41,7 +40,6 @@ export const TextLais = styled.p`
 export const StyledHeader = styled.h2`
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
   color:  ${({ theme }) => theme.COLORS.WHITE};
-  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   margin-bottom: 15px;
 `;
@@ -63,7 +61,6 @@ export const StyledLink = styled.a`
   text-decoration: none;
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};
   color:  ${({ theme }) => theme.COLORS.WHITE};
-  font-family: 'Montserrat', sans-serif;
   size: ${({ theme }) => theme.FONT_SIZE.MD};
   &:hover {
     text-decoration: underline;

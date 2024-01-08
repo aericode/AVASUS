@@ -16,7 +16,6 @@ export const StyledText = styled.p`
   text-align: center;
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};
   color:  ${({ theme }) => theme.COLORS.WHITE};
-  font-family: 'Montserrat', sans-serif;
   size: ${({ theme }) => theme.FONT_SIZE.MD};
   white-space: pre-line;
 `
