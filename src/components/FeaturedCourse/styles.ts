@@ -38,7 +38,7 @@ export const TextWrapper = styled.div`
    height: auto;
    justify-content: space-evenly;
    padding: 0 10px;
-   margin-left: 10px;
+   margin-left: 5px;
 `;
 
 export const CourseTitle = styled.h1`
@@ -66,6 +66,13 @@ export const InfoWrapper = styled.div`
 
 export const InfoText = styled.p`
    font-size: ${({ theme }) => theme.FONT_SIZE.SM};
+   margin-left: 5px;
+`
+
+export const IconTextWrapper = styled.div`
+   display: flex;
+   flex-direction: row;
+   align-items: center;
 `
 
 export const SeeModuleButton = styled.button`
@@ -91,17 +98,3 @@ export const SeeModuleText = styled.p`
   white-space: nowrap;
 `
 
-export const SeeMoreButton = styled.button`
-  padding: 10px 35px;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_200};
-  font-size: ${({ theme }) => theme.FONT_SIZE.XL};
-  color:  ${({ theme }) => theme.COLORS.WHITE};
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  height: 40px;
-
-  &:hover {
-    opacity: 0.8;
-  }
-`;
