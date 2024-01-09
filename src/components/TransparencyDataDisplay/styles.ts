@@ -9,6 +9,7 @@ export const StyledTitle = styled.h3`
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
   color: ${({ theme }) => theme.COLORS.RED_500};
   text-align: center;
+  margin-bottom: 30px;
 `
 export const Wrapper = styled.div`
   display: flex;
@@ -16,13 +17,23 @@ export const Wrapper = styled.div`
 `
 
 export const DataBlock = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+export const DataHeaderWrapper = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-bottom: 15px;
 `
 
 export const DataName = styled.div`
   font-size: ${({ theme }) => theme.FONT_SIZE.MD};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
   color: ${({ theme }) => theme.COLORS.GRAY_800};
-
+  margin-left: 5px;
 `
 
 export const DataDisplay = styled.div`
