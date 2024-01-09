@@ -21,18 +21,27 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+margin: 20px 20px;
 `
 export const DataHeaderWrapper = styled.div`
 display: flex;
 flex-direction: row;
 align-items: center;
 margin-bottom: 15px;
+width: fit-content;
+`
+
+export const LineWrapper = styled.div`
+display: flex;
+flex-direction: inherit;
+
 `
 
 export const DataName = styled.div`
   font-size: ${({ theme }) => theme.FONT_SIZE.MD};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
   color: ${({ theme }) => theme.COLORS.GRAY_800};
+  text-align: center;
   margin-left: 5px;
 `
 
