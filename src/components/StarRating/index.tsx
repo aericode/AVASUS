@@ -13,7 +13,7 @@ export function StarRating({rating}: StarRatingProps) {
     <Container>
       <Rating
       fillColor = {theme.COLORS.RED_300}
-      initialValue={ Number(rating) || 0}
+      initialValue={ Math.round(Number(rating)) || 0}
       readonly
       size={20}
       />
