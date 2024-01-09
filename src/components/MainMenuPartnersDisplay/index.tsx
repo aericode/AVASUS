@@ -1,12 +1,16 @@
 import { ContentCard } from "../ContentCard";
-import { Container, StyledHeader } from "./styles";
+import { Container, PartnerList, StyledHeader } from "./styles";
 
-export function MainMenuPartnersDisplay (){
-  return(
+export function MainMenuPartnersDisplay() {
+  return (
     <Container>
-      <ContentCard>
-        <StyledHeader>Parceiros</StyledHeader>
-      </ContentCard>
+      <StyledHeader>Parceiros</StyledHeader>
+
+        <ContentCard>
+          <PartnerList>
+
+          </PartnerList>
+        </ContentCard>
     </Container>
   )
 }

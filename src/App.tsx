@@ -1,22 +1,20 @@
 import './fonts.css';
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer';
-import { ImageCarousel } from './components/Carousel';
-import { MainMenuEducationalModules } from './components/MainMenuEducationalModules';
-import { MainMenuPartnersDisplay } from './components/MainMenuPartnersDisplay';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
+import {Inicio} from '../src/screens/Inicio';
 
 function App() {
 
   return (
     <div>
       <Navbar />
-      <>
-        <ImageCarousel />
-        <MainMenuEducationalModules/>
-        {/* <MainMenuPartnersDisplay/> */}
-
-      </>
+      <Router>
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+      </Routes>
+    </Router>
       <Footer />
     </div>
   )
