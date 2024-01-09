@@ -1,4 +1,5 @@
 import { ContentCard } from "../ContentCard";
+import { ResponsiveFlexWrapper } from "../ResponsiveFlexWrapper";
 import { Container, PartnerBlock, PartnerList, PartnerName, PartnerTitle, StyledHeader } from "./styles";
 
 export function MainMenuPartnersDisplay() {
@@ -7,7 +8,7 @@ export function MainMenuPartnersDisplay() {
       <StyledHeader>Parceiros</StyledHeader>
 
       <ContentCard>
-        <PartnerList>
+        <ResponsiveFlexWrapper>
           <PartnerBlock>
             <PartnerTitle>
               Governo do RN
@@ -44,7 +45,7 @@ export function MainMenuPartnersDisplay() {
             </PartnerName>
           </PartnerBlock>
 
-        </PartnerList>
+        </ResponsiveFlexWrapper>
       </ContentCard>
     </Container>
   )

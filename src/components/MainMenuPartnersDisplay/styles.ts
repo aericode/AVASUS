@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-   width: 80vw;
+   width: fit-content;
    max-width: 1110px;
    justify-self:center;
    align-items: center;
@@ -26,7 +26,9 @@ export const PartnerBlock = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 242px;
-  margin: 0 26px;
+  margin: 10px 26px;
+  
+  align-self: flex-start;
 `
 
 export const PartnerTitle = styled.h3`
