@@ -10,6 +10,7 @@ export function FeaturedCourseDisplay() {
   const { isSmallScreen } = useScreen();
   const [selectedFilter, setSelectedFilter] = useState<"popular" | "rating" | "recent">("popular")
 
+
   useEffect(() => {
     let ratingFunction;
     switch (selectedFilter) {
@@ -27,6 +28,10 @@ export function FeaturedCourseDisplay() {
     }
     setDisplayedCourses(getDisplayedCourses(ratingFunction));
   }, [selectedFilter]);
+
+  useEffect(() => {
+    setDisplayedCourses(getDisplayedCourses(sortByEnrollment));
+  }, [cursosData]);
 
   const sortByEnrollment = (a: Curso, b: Curso) => b.matriculados - a.matriculados
   const sortByRating = (a: Curso, b: Curso) => Number(b.avaliacao) - Number(a.avaliacao)

@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer';
 import { ImageCarousel } from './components/Carousel';
 import { MainMenuEducationalModules } from './components/MainMenuEducationalModules';
+import { MainMenuPartnersDisplay } from './components/MainMenuPartnersDisplay';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <>
         <ImageCarousel />
         <MainMenuEducationalModules/>
+        <MainMenuPartnersDisplay/>
 
       </>
       <Footer />
