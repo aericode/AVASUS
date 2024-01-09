@@ -17,3 +17,7 @@ export const Wrapper = styled.div`
 
 export const BreadcrumbContainer = styled.div`
 `;
+
+export const StiledTitle = styled.h2`
+  color: ${({ theme }) => theme.COLORS.RED_500};
+`;
