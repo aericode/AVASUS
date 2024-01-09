@@ -18,6 +18,9 @@ export const Wrapper = styled.div`
 export const BreadcrumbContainer = styled.div`
 `;
 
-export const StiledTitle = styled.h2`
+export const StyledTitle = styled.h2`
   color: ${({ theme }) => theme.COLORS.RED_500};
+  font-size: ${({ theme }) => theme.FONT_SIZE.XL3};
+  margin: 30px 0;
+  text-align: center;
 `;

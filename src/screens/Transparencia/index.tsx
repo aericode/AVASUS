@@ -1,5 +1,6 @@
 import { DefaultBreadcrumbText } from '../../components/DefaultBreadcrumbText';
-import { BreadcrumbContainer, Container, Wrapper } from './styles';
+import { TransparencyDataDisplay } from '../../components/TransparencyDataDisplay';
+import { BreadcrumbContainer, Container, StyledTitle, Wrapper } from './styles';
 
 
 export function Transparencia() {
@@ -10,9 +11,9 @@ export function Transparencia() {
           <DefaultBreadcrumbText isRoot text={'Início'}/>
           <DefaultBreadcrumbText isRoot={false} text={' / Transparência'}/>
         </BreadcrumbContainer>
-
+        <StyledTitle>Transparência</StyledTitle>
+        <TransparencyDataDisplay/>
       </Wrapper>
-
     </Container>
   );
 }
