@@ -1,6 +1,10 @@
 import 'react-multi-carousel/lib/styles.css';
 
 import avasusBanner from '../../assets/banner/avasusBanner.png';
+import avasusBanner2 from '../../assets/banner/avasusBanner2.png';
+import avasusBanner3 from '../../assets/banner/avasusBanner3.png';
+
+
 import { CarouselImage, StyledCarousel } from './styles';
 
 export function ImageCarousel() {
@@ -21,8 +25,8 @@ export function ImageCarousel() {
       infinite={true}
     >
       <CarouselImage src={avasusBanner} alt="Image 1" />
-      <CarouselImage src={avasusBanner} alt="Image 1" />
-      <CarouselImage src={avasusBanner} alt="Image 1" />
+      <CarouselImage src={avasusBanner2} alt="Image 2" />
+      <CarouselImage src={avasusBanner3} alt="Image 3" />
     </StyledCarousel>
   );
 };

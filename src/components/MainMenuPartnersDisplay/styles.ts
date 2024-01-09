@@ -20,19 +20,25 @@ export const StyledHeader = styled.h2`
 
 export const PartnerList = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `
 export const PartnerBlock = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  max-width: 242px;
+  margin: 0 26px;
 `
 
 export const PartnerTitle = styled.h3`
-  display: flex;
-  flex-direction: column;
+text-align: center;
+margin-bottom: 18px;
+
+  font-size: ${({ theme }) => theme.FONT_SIZE.XL};
+  color:  ${({ theme }) => theme.COLORS.BLACK};
 `
 
 export const PartnerName = styled.p`
-  display: flex;
-  flex-direction: column;
+text-align: center;
+  font-size: ${({ theme }) => theme.FONT_SIZE.MD};
+  color:  ${({ theme }) => theme.COLORS.GRAY_200};
 `

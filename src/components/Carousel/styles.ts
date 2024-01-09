@@ -6,6 +6,7 @@ export const CarouselImage = styled.img`
   height: auto;
   object-fit: cover;
   min-height: 400px;
+  max-height: 940px;
 `
 
 export const StyledCarousel = styled(Carousel)`
