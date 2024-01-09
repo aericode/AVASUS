@@ -1,4 +1,3 @@
-import './App.css'
 import './fonts.css';
 import { Navbar } from './components/Navbar'
 import { Footer } from './components/Footer';
@@ -10,7 +9,7 @@ import { MainMenuPartnersDisplay } from './components/MainMenuPartnersDisplay';
 function App() {
 
   return (
-    <div className="App">
+    <div>
       <Navbar />
       <>
         <ImageCarousel />
