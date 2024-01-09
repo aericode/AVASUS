@@ -27,7 +27,7 @@ export const DropdownList = styled.ul<DropdownListProps>`
 
 
 export const DropdownItem = styled.li`
-  padding: 8px 12px;
+  
   width: auto;
   cursor: pointer;
   border-bottom:  1px solid  ${({ theme }) => theme.COLORS.GRAY_150};
@@ -36,5 +36,21 @@ export const DropdownItem = styled.li`
 
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.GRAY_50};
+  }
+`;
+
+export const NavLink = styled.a`
+padding: 8px 12px;
+  white-space: nowrap;
+  text-decoration: none;
+  width: auto;
+  height: auto;
+  display: block;
+
+  color:  ${({ theme }) => theme.COLORS.GRAY_250};
+  size: ${({ theme }) => theme.FONT_SIZE.LG};
+
+  &:hover {
+    text-decoration: none;
   }
 `;
