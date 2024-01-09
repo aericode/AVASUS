@@ -50,16 +50,16 @@ export function TransparencyDataDisplay(){
           <DataBlock>
             <DataHeaderWrapper>
             <StyledIcon icon={faUserGroup} />
-            <DataName>Total de usuários registrados</DataName>
+            <DataName>Investimento médio por curso</DataName>
             </DataHeaderWrapper>
-            <DataDisplay>{ transparenciaData && transparenciaData!.dados_gerais.usuarios_registrados }</DataDisplay>
+            <DataDisplay>{ transparenciaData && transparenciaData!.dados_gerais.investimento_medio_curso }</DataDisplay>
           </DataBlock>
           <DataBlock>
             <DataHeaderWrapper>
             <StyledIcon icon={faUserGroup} />
-            <DataName>Inscrições realizadas</DataName>
+            <DataName>Investimento médio por aluno</DataName>
             </DataHeaderWrapper>
-            <DataDisplay>{ transparenciaData && transparenciaData!.dados_gerais.incricoes_realizadas }</DataDisplay>
+            <DataDisplay>{ transparenciaData && transparenciaData!.dados_gerais.investimento_medio_aluno }</DataDisplay>
           </DataBlock>
           </LineWrapper>
         </ResponsiveFlexWrapper>
