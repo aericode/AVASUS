@@ -4,6 +4,9 @@ import { Footer } from './components/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import {Inicio} from '../src/screens/Inicio';
+import { Transparencia } from './screens/Transparencia';
+import { Cursos } from './screens/Cursos';
+import { Parceiros } from './screens/Parceiros';
 
 function App() {
 
@@ -13,6 +16,9 @@ function App() {
       <Router>
       <Routes>
         <Route path="/" element={<Inicio />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/parceiros" element={<Parceiros />} />
+        <Route path="/transparencia" element={<Transparencia />} />
       </Routes>
     </Router>
       <Footer />
