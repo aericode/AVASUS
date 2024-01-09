@@ -15,7 +15,7 @@ function App() {
       <>
         <ImageCarousel />
         <MainMenuEducationalModules/>
-        <MainMenuPartnersDisplay/>
+        {/* <MainMenuPartnersDisplay/> */}
 
       </>
       <Footer />
