@@ -1,22 +1,19 @@
 import { ContentCard } from "../ContentCard";
 import { ResponsiveFlexWrapper } from "../ResponsiveFlexWrapper";
-import { Container, GraphCardContainer, GraphImage, Wrapper } from "./styles";
+import { Container, Wrapper } from "./styles";
+
+import graphBrazil from '../../assets/transparencyGraphs/graphBrazil.png';
+import graphPieChart from '../../assets/transparencyGraphs/graphPieChart.png';
+import { TransparencyGraphCard } from "../TransparencyGraphCard";
+
 
 export function TransparencyGraphSection() {
   return (
     <Container>
       <ResponsiveFlexWrapper>
         <Wrapper>
-          <GraphCardContainer>
-            <ContentCard>
-              <GraphImage />
-            </ContentCard>
-          </GraphCardContainer>
-          <GraphCardContainer>
-            <ContentCard>
-              <GraphImage />
-            </ContentCard>
-          </GraphCardContainer>
+          <TransparencyGraphCard title={"Usuários por curso"} imageSrc={graphPieChart} />
+          <TransparencyGraphCard title={"Usuários por Estado"} imageSrc={graphBrazil} />
         </Wrapper>
       </ResponsiveFlexWrapper>
     </Container>
