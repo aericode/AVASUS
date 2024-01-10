@@ -1,4 +1,3 @@
-import { ContentCard } from "../ContentCard";
 import { ResponsiveFlexWrapper } from "../ResponsiveFlexWrapper";
 import { Container, Wrapper } from "./styles";
 

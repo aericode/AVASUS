@@ -3,6 +3,7 @@ import { DataContext } from "../../contexts/DataContext";
 import { Container, StyledGraphIcon, StyledText, TextContainer, Wrapper } from "./styles";
 import { theme } from "../../theme";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { addDotsToNumber } from "../../utils/addDotsToNumber";
 
 export function TransparencyGraphData() {
   const { transparenciaData } = useContext(DataContext)!;
@@ -20,7 +21,7 @@ export function TransparencyGraphData() {
             <TextContainer key={index}>
               <StyledGraphIcon icon={faCircle} color={getMarkupColor(index)}/>
               <StyledText>{item.curso}:&nbsp;</StyledText>
-              <StyledText>{item.usuarios}</StyledText>
+              <StyledText>{addDotsToNumber(item.usuarios)}</StyledText>
             </TextContainer>
           ))}
       </Wrapper>

@@ -5,13 +5,10 @@ import { ResponsiveFlexWrapper } from "../ResponsiveFlexWrapper";
 import { Container, DataBlock, DataDisplay, DataHeaderWrapper, DataName, StyledTitle, LineWrapper, CardPadding } from "./styles";
 import { StyledIcon } from "../StyledIcon";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { addDotsToNumber } from "../../utils/addDotsToNumber";
 
 export function TransparencyDataDisplay() {
   const { transparenciaData } = useContext(DataContext)!;
-
-  function addDotsToNumber(number :number) {
-    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
 
   return (
     <Container>
