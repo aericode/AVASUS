@@ -22,7 +22,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-margin: 20px 20px;
+margin: 20px 14px;
 `
 export const DataHeaderWrapper = styled.div`
 display: flex;
@@ -50,4 +50,7 @@ export const DataDisplay = styled.div`
   font-size: ${({ theme }) => theme.FONT_SIZE.XL2};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
   color: ${({ theme }) => theme.COLORS.RED_500};
+`
+export const CardPadding = styled.div`
+  padding: 10px;
 `
