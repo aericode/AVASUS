@@ -17,11 +17,6 @@ export const StyledHeader = styled.h2`
   margin-bottom: 30px;
 `
 
-
-export const PartnerList = styled.div`
-  display: flex;
-  flex-direction: row;
-`
 export const PartnerBlock = styled.div`
   display: flex;
   flex-direction: column;

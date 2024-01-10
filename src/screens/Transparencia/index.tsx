@@ -8,10 +8,10 @@ export function Transparencia() {
   return (
     <Container>
       <Wrapper>
-        <BreadcrumbContainer>
+        <div>
           <DefaultBreadcrumbText isRoot text={'Início'}/>
           <DefaultBreadcrumbText isRoot={false} text={' / Transparência'}/>
-        </BreadcrumbContainer>
+        </div>
         <StyledTitle>Transparência</StyledTitle>
         <TransparencyDataDisplay/>
         <TransparencyGraphSection/>
