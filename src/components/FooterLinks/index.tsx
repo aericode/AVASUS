@@ -19,19 +19,19 @@ export function FooterLinks() {
           <StyledHeader>Links Úteis</StyledHeader>
           <LinkList>
             <ListItem>
-              <StyledLink href="#"> Início </StyledLink>
+              <StyledLink href="/"> Início </StyledLink>
             </ListItem>
             <ListItem>
               <StyledLink href="#"> Sobre Nós </StyledLink>
             </ListItem>
             <ListItem>
-              <StyledLink href="#"> Módulos </StyledLink>
+              <StyledLink href="/cursos"> Módulos </StyledLink>
             </ListItem>
             <ListItem>
-              <StyledLink href="#"> Parceiros </StyledLink>
+              <StyledLink href="/parceiros"> Parceiros </StyledLink>
             </ListItem>
             <ListItem>
-              <StyledLink href="#"> Transparência </StyledLink>
+              <StyledLink href="/transparencia"> Transparência </StyledLink>
             </ListItem>
           </LinkList>
         </Section>
