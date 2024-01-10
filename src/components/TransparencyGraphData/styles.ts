@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -23,4 +24,9 @@ export const StyledText = styled.p`
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
   color: ${({ theme }) => theme.COLORS.GRAY_800};
   display: inline;
+`;
+
+export const StyledGraphIcon = styled(FontAwesomeIcon)`
+  font-size: 20px;
+  margin-right: 10px;
 `;

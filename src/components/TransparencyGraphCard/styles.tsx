@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 80vw;
   max-width: 540px;
-  margin: 10px 0;
+  margin-top: 10px;
 `
 
 export const Wrapper = styled.div`
@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   height: auto;
   object-fit: stretch;
   justify-content: center;
+  margin-bottom: 30px;
 `
 export const GraphImage = styled.img`
   width: 80%;
@@ -23,7 +24,6 @@ export const ImageWrapper = styled.div`
   height: 500px;
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
 
 `
 

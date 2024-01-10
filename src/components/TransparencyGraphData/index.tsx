@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { DataContext } from "../../contexts/DataContext";
-import { Container, StyledText, TextContainer, Wrapper } from "./styles";
-import { Transparencia } from "../../types/transparencia";
+import { Container, StyledGraphIcon, StyledText, TextContainer, Wrapper } from "./styles";
 import { theme } from "../../theme";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 export function TransparencyGraphData() {
   const { transparenciaData } = useContext(DataContext)!;
@@ -18,6 +18,7 @@ export function TransparencyGraphData() {
         {transparenciaData &&
           transparenciaData.usuarios_por_curso.map((item, index) => (
             <TextContainer key={index}>
+              <StyledGraphIcon icon={faCircle} color={getMarkupColor(index)}/>
               <StyledText>{item.curso}:&nbsp;</StyledText>
               <StyledText>{item.usuarios}</StyledText>
             </TextContainer>
