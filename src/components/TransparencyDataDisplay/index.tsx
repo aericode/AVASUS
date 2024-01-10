@@ -9,6 +9,10 @@ import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 export function TransparencyDataDisplay() {
   const { transparenciaData } = useContext(DataContext)!;
 
+  function addDotsToNumber(number :number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+
   return (
     <Container>
       <ContentCard>
@@ -21,21 +25,21 @@ export function TransparencyDataDisplay() {
                   <StyledIcon icon={faUserGroup} />
                   <DataName>Total de usuários registrados</DataName>
                 </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.usuarios_registrados}</DataDisplay>
+                <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.usuarios_registrados)}</DataDisplay>
               </DataBlock>
               <DataBlock>
                 <DataHeaderWrapper>
                   <StyledIcon icon={faUserGroup} />
                   <DataName>Inscrições realizadas</DataName>
                 </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.incricoes_realizadas}</DataDisplay>
+                <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.incricoes_realizadas)}</DataDisplay>
               </DataBlock>
               <DataBlock>
                 <DataHeaderWrapper>
                   <StyledIcon icon={faUserGroup} />
                   <DataName>Cursos ativos</DataName>
                 </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.cursos_ativos}</DataDisplay>
+                <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.cursos_ativos)}</DataDisplay>
               </DataBlock>
               <DataBlock>
                 <DataHeaderWrapper>
