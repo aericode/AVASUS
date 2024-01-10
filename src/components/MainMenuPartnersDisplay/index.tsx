@@ -1,6 +1,6 @@
 import { ContentCard } from "../ContentCard";
 import { ResponsiveFlexWrapper } from "../ResponsiveFlexWrapper";
-import { Container, PartnerBlock, PartnerList, PartnerName, PartnerTitle, StyledHeader } from "./styles";
+import { Container, PartnerBlock, PartnerName, PartnerTitle, StyledHeader } from "./styles";
 
 export function MainMenuPartnersDisplay() {
   return (

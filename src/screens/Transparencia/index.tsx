@@ -1,6 +1,6 @@
 import { DefaultBreadcrumbText } from '../../components/DefaultBreadcrumbText';
 import { TransparencyDataDisplay } from '../../components/TransparencyDataDisplay';
-import { TransparencyGraphs } from '../../components/TransparencyGraphs';
+import { TransparencyGraphSection } from '../../components/TransparencyGraphSection';
 import { BreadcrumbContainer, Container, StyledTitle, Wrapper } from './styles';
 
 
@@ -14,7 +14,7 @@ export function Transparencia() {
         </BreadcrumbContainer>
         <StyledTitle>Transparência</StyledTitle>
         <TransparencyDataDisplay/>
-        <TransparencyGraphs/>
+        <TransparencyGraphSection/>
       </Wrapper>
     </Container>
   );
