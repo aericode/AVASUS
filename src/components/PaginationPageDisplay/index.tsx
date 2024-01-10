@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 import { Grid } from "./styles";
 
-interface ContentGridProps {
+interface PaginationPageDisplayProps {
   children: ReactNode;
 }
 
-export function ContentGrid({children}:ContentGridProps){
+export function PaginationPageDisplay({children}:PaginationPageDisplayProps){
   return <Grid>{children}</Grid>;
 }

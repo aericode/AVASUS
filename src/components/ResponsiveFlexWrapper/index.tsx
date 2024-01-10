@@ -1,12 +1,12 @@
-import React, { ReactNode, HTMLAttributes } from 'react';
+import { ReactNode } from 'react';
 import { useScreen } from '../../contexts/ScreenSizeContext';
 import { Wrapper } from './styles';
 
-interface ResponsiveFlexWrapperProps extends HTMLAttributes<HTMLDivElement> {
+interface ResponsiveFlexWrapperProps{
   children: ReactNode;
 }
 
-export function ResponsiveFlexWrapper({ children, ...rest }:ResponsiveFlexWrapperProps){
+export function ResponsiveFlexWrapper({ children }:ResponsiveFlexWrapperProps){
   const { isSmallScreen } = useScreen();
 
   return (

@@ -1,4 +1,4 @@
-import { ContentGrid } from '../../components/ContentGrid';
+import { PaginationPageDisplay } from '../../components/PaginationPageDisplay';
 import { DefaultBreadcrumbText } from '../../components/DefaultBreadcrumbText';
 import { Container, PartnerCard, Wrapper } from './styles';
 
@@ -12,15 +12,14 @@ export function Parceiros() {
           <DefaultBreadcrumbText isRoot text={'Início'}/>
           <DefaultBreadcrumbText isRoot={false} text={' / Parceiros'}/>
       </div>
-      <ContentGrid>
+      <PaginationPageDisplay>
         <PartnerCard />
         <PartnerCard />
         <PartnerCard />
         <PartnerCard />
         <PartnerCard />
         <PartnerCard />
-
-      </ContentGrid>
+      </PaginationPageDisplay>
       </Wrapper>
     </Container>
   );
