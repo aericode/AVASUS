@@ -97,4 +97,6 @@ export const SeeModuleText = styled.p`
   color:  ${({ theme }) => theme.COLORS.WHITE};
   white-space: nowrap;
 `
-
+export const CardPadding = styled.div`
+  padding: 10px;
+`
