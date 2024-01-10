@@ -14,8 +14,3 @@ export const Wrapper = styled.div`
   width: 80vw;
   max-width: 1110px;
 `;
-export const PartnerCard = styled.div`
-  width: 100%;
-  height: 100px;
-  background-color: red;
-`;
