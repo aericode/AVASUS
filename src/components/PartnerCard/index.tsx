@@ -1,5 +1,5 @@
 import { Parceiro } from "../../types/parceiro";
-import { Container } from "./styles";
+import { Container, PartnerImage } from "./styles";
 
 interface PartnerCardProps{
   parceiro?: Parceiro
@@ -9,7 +9,7 @@ export function PartnerCard({parceiro}:PartnerCardProps){
   
   return(
     <Container>
-      <p>{parceiro && parceiro.capa || ''}</p>
+      <PartnerImage src={parceiro!.capa}/>
       <p>{parceiro && parceiro.titulo || ''}</p>
     </Container>
   )

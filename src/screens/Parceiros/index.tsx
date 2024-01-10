@@ -10,25 +10,19 @@ export function Parceiros() {
   const { parceirosData } = useContext(DataContext)!;
 
   return (
-    <>
+    <Container>
       <Wrapper>
 
         <div>
           <DefaultBreadcrumbText isRoot text={'Início'} />
           <DefaultBreadcrumbText isRoot={false} text={' / Parceiros'} />
         </div>
-        {
-          parceirosData ?
-            <PaginationPageDisplay>
-              <PartnerCard parceiro={parceirosData[0]} />
-              <PartnerCard parceiro={parceirosData[1]} />
-              <PartnerCard parceiro={parceirosData[2]} />
-            </PaginationPageDisplay>
-            :
-            <></>
-        }
-
+        <PaginationPageDisplay>
+          {parceirosData ? parceirosData.slice(0,6).map((parceiro) => (
+            <PartnerCard parceiro={parceiro} />
+          )) : <></>}
+        </PaginationPageDisplay>
       </Wrapper>
-    </>
+    </Container>
   );
 }
