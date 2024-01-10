@@ -1,4 +1,5 @@
 import { ContentCard } from "../ContentCard";
+import { TransparencyGraphData } from "../TransparencyGraphData";
 import { Container, GraphImage, ImageWrapper, StyledTitle, Wrapper } from "./styles";
 
 interface TransparencyGraphCardProps {
@@ -15,6 +16,7 @@ export function TransparencyGraphCard({title, imageSrc}:TransparencyGraphCardPro
           <ImageWrapper>
             <GraphImage src={imageSrc} />
           </ImageWrapper>
+          <TransparencyGraphData/>
         </Wrapper>
       </ContentCard>
     </Container>
