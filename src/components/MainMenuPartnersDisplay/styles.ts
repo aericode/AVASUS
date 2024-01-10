@@ -26,7 +26,7 @@ export const PartnerBlock = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 242px;
-  margin: 10px 26px;
+  margin: 20px 26px;
   
   align-self: flex-start;
 `

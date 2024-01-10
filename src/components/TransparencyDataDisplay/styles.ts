@@ -10,6 +10,7 @@ export const StyledTitle = styled.h3`
   color: ${({ theme }) => theme.COLORS.RED_500};
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 10px;
 `
 export const Wrapper = styled.div`
   display: flex;
