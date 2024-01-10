@@ -1,6 +1,26 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-   background-color: red;
-   height: 3000px;
+display: flex;
+justify-content: center;
+align-items: center;
+`;
+
+export const Wrapper = styled.div`
+  width: fit-content;
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px 0;
+  width: fit-content;
+`;
+
+export const StyledText = styled.p`
+  font-size: ${({ theme }) => theme.FONT_SIZE.SM};
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
+  color: ${({ theme }) => theme.COLORS.GRAY_800};
+  display: inline;
 `;
