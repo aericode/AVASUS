@@ -15,8 +15,9 @@ export const TextContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 5px 0;
+  margin: 15px 0;
   width: fit-content;
+
 `;
 
 export const StyledText = styled.p`
