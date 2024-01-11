@@ -33,11 +33,11 @@ export const PaginateContainer = styled.div`
       margin: 0;
       cursor: pointer;
       user-select: none;
-      border: 1px solid #ccc;
-      padding: 8px 12px;
+      border: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
       font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
       color: ${({ theme }) => theme.COLORS.BLACK};
       border-collapse: collapse;
+      padding: 6px 8px;
 
       &.break {
         pointer-events: none;
@@ -46,13 +46,14 @@ export const PaginateContainer = styled.div`
       
 
       &:hover {
-        background-color: ${({ theme }) => theme.COLORS.GRAY_50};
+        text-decoration: underline;
       }
     }
 
     .active {
         background-color: ${({ theme }) => theme.COLORS.RED_300};
         color: ${({ theme }) => theme.COLORS.WHITE};
+        border: 0px;
     }
 
     .previousButton {
@@ -61,6 +62,10 @@ export const PaginateContainer = styled.div`
 
     .nextButton {
       border-radius: 0px 10px 10px 0px;
+    }
+
+    .pageLink{
+      padding: 0 12px;
     }
   }
 `;

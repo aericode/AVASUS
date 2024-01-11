@@ -57,6 +57,7 @@ export function Parceiros() {
             activeClassName={"active"}
             previousClassName={"previousButton"}
             nextClassName={"nextButton"}
+            pageLinkClassName={"pageLink"}
           />
         </PaginateContainer>
       </Wrapper>
