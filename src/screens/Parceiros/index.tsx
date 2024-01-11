@@ -1,4 +1,4 @@
-import { DefaultBreadcrumbText } from '../../components/DefaultBreadcrumbText';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
 import { Container, PaginationWrapper, StyledHeader, Wrapper } from './styles';
 import { useContext } from 'react';
 import { DataContext } from '../../contexts/DataContext';
@@ -12,11 +12,7 @@ export function Parceiros() {
   return (
     <Container>
       <Wrapper>
-
-        <div>
-          <DefaultBreadcrumbText isRoot text={'Início'} />
-          <DefaultBreadcrumbText isRoot={false} text={' / Parceiros'} />
-        </div>
+        <Breadcrumbs rootText={'Início'} currentPageText={' / Parceiros'} />
         <StyledHeader>Nossos parceiros</StyledHeader>
         <PaginationWrapper>
           <PaginatedContent paginationObjectType={'parceiro'} contentArray={parceirosData} />

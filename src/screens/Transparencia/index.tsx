@@ -1,17 +1,14 @@
-import { DefaultBreadcrumbText } from '../../components/DefaultBreadcrumbText';
+import { Breadcrumbs } from '../../components/Breadcrumbs';
 import { TransparencyDataDisplay } from '../../components/TransparencyDataDisplay';
 import { TransparencyGraphSection } from '../../components/TransparencyGraphSection';
-import { BreadcrumbContainer, Container, StyledTitle, Wrapper } from './styles';
+import { Container, StyledTitle, Wrapper } from './styles';
 
 
 export function Transparencia() {
   return (
     <Container>
       <Wrapper>
-        <div>
-          <DefaultBreadcrumbText isRoot text={'Início'}/>
-          <DefaultBreadcrumbText isRoot={false} text={' / Transparência'}/>
-        </div>
+        <Breadcrumbs rootText={'Início'} currentPageText={' / Transparência'} />
         <StyledTitle>Transparência</StyledTitle>
         <TransparencyDataDisplay/>
         <TransparencyGraphSection/>

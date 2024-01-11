@@ -4,6 +4,7 @@ export const Container = styled.div`
   width: auto;
   max-width: 400px;
   height: 340px;
+  cursor: pointer;
 `;
 export const ImageWrapper = styled.div`
   max-width: 350px;
