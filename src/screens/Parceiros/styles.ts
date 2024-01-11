@@ -35,6 +35,9 @@ export const PaginateContainer = styled.div`
       user-select: none;
       border: 1px solid #ccc;
       padding: 8px 12px;
+      font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
+      color: ${({ theme }) => theme.COLORS.BLACK};
+      border-collapse: collapse;
 
       &.break {
         pointer-events: none;
@@ -49,8 +52,8 @@ export const PaginateContainer = styled.div`
 
     .active {
         background-color: ${({ theme }) => theme.COLORS.RED_300};
-        color: #fff;
-      }
+        color: ${({ theme }) => theme.COLORS.WHITE};
+    }
 
     .previousButton {
       border-radius: 10px 0px 0px 10px;

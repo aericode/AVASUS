@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: auto;
   max-width: 400px;
+  height: 320px;
 `;
 export const ImageWrapper = styled.div`
   max-width: 350px;
   height: 200px;
+  max-height: 200px;
   display: flex;
   margin: 10px;
 `;
