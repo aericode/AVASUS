@@ -1,13 +1,32 @@
 import { PaginationPageDisplay } from '../../components/PaginationPageDisplay';
 import { DefaultBreadcrumbText } from '../../components/DefaultBreadcrumbText';
-import { Container, Wrapper } from './styles';
-import { useContext } from 'react';
+import { Container, PageWrapper, PaginateContainer, Wrapper } from './styles';
+import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../contexts/DataContext';
 import { PartnerCard } from '../../components/PartnerCard';
+import { Parceiro } from '../../types/parceiro';
+import ReactPaginate from 'react-paginate';
 
 
 export function Parceiros() {
   const { parceirosData } = useContext(DataContext)!;
+
+  const itemsPerPage = 6
+
+  const [currentItems, setCurrentItems] = useState<Parceiro[]>();
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(parceirosData ? parceirosData!.slice(itemOffset, endOffset) : []);
+    setPageCount(Math.ceil(parceirosData ? parceirosData!.length / itemsPerPage : 0));
+  }, [itemOffset, itemsPerPage, parceirosData]);
+
+  const handlePageClick = (event: any) => {
+    const newOffset = event.selected * itemsPerPage % parceirosData!.length;
+    setItemOffset(newOffset);
+  };
 
   return (
     <Container>
@@ -17,11 +36,29 @@ export function Parceiros() {
           <DefaultBreadcrumbText isRoot text={'Início'} />
           <DefaultBreadcrumbText isRoot={false} text={' / Parceiros'} />
         </div>
-        <PaginationPageDisplay>
-          {parceirosData ? parceirosData.slice(0,6).map((parceiro) => (
-            <PartnerCard parceiro={parceiro} />
-          )) : <></>}
-        </PaginationPageDisplay>
+        <PageWrapper>
+          <PaginationPageDisplay>
+            {currentItems && currentItems.map((parceiro) => (
+              <PartnerCard parceiro={parceiro} />
+            ))}
+          </PaginationPageDisplay>
+        </PageWrapper>
+
+
+        <PaginateContainer>
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="próximo >"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+            previousLabel="< anterior"
+            renderOnZeroPageCount={null}
+            activeClassName={"active"}
+            previousClassName={"previousButton"}
+            nextClassName={"nextButton"}
+          />
+        </PaginateContainer>
       </Wrapper>
     </Container>
   );
