@@ -1,6 +1,6 @@
 import { PaginationPageDisplay } from '../../components/PaginationPageDisplay';
 import { DefaultBreadcrumbText } from '../../components/DefaultBreadcrumbText';
-import { Container, PageWrapper, PaginateContainer, Wrapper } from './styles';
+import { Container, PageWrapper, PaginateContainer, ResultCountText, Wrapper } from './styles';
 import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../contexts/DataContext';
 import { PartnerCard } from '../../components/PartnerCard';
@@ -36,6 +36,7 @@ export function Parceiros() {
           <DefaultBreadcrumbText isRoot text={'Início'} />
           <DefaultBreadcrumbText isRoot={false} text={' / Parceiros'} />
         </div>
+        <ResultCountText>{ `${currentItems?.length} de  ${parceirosData?.length} resultados` }</ResultCountText>
         <PageWrapper>
           <PaginationPageDisplay>
             {currentItems && currentItems.map((parceiro) => (

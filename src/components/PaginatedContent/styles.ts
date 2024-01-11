@@ -6,14 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin-top: 30px;
-  margin-bottom: 190px;
-`;
-
-export const Wrapper = styled.div`
   width: 80vw;
   max-width: 1200px;
 `;
+
 
 export const PageWrapper = styled.div`
   margin: 30px 0;
@@ -48,9 +44,7 @@ export const PaginateContainer = styled.div`
 
       &.break {
         pointer-events: none;
-      }
-
-      
+      }      
 
       &:hover {
         text-decoration: underline;
