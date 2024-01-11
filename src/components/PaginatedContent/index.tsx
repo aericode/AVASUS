@@ -7,11 +7,12 @@ import ReactPaginate from 'react-paginate';
 import { Curso } from '../../types/curso';
 
 interface PaginatedContentProps {
+  paginationObjectType: "parceiro"|"curso"
   contentArray?: Parceiro[] | Curso[]
 }
 
 
-export function PaginatedContent({contentArray}: PaginatedContentProps) {
+export function PaginatedContent({paginationObjectType, contentArray}: PaginatedContentProps) {
 
   const itemsPerPage = 6
 
@@ -30,13 +31,7 @@ export function PaginatedContent({contentArray}: PaginatedContentProps) {
     setItemOffset(newOffset);
   };
 
-  function isParceiro(item: any): item is Parceiro {
-    return typeof item === 'object' && 'specificProperty' in item;
-  }
 
-  function isCurso(item: any): item is Curso {
-    return typeof item === 'object' && 'specificProperty' in item;
-  }
 
   return (
     <Container>
@@ -44,7 +39,7 @@ export function PaginatedContent({contentArray}: PaginatedContentProps) {
         <PageWrapper>
           <PaginationPageDisplay>
             {currentItems && currentItems.map((contentItem, index) => (
-              isParceiro(contentItem) && (<PartnerCard key={index} parceiro={contentItem} />
+              paginationObjectType==="parceiro" && (<PartnerCard key={index} parceiro={contentItem} />
               )
             ))}
           </PaginationPageDisplay>

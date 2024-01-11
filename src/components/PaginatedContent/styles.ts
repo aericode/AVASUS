@@ -19,7 +19,8 @@ export const ResultCountText = styled.p`
   color: ${({ theme }) => theme.COLORS.GRAY_800};
   font-size: ${({ theme }) => theme.FONT_SIZE.SM};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};
-  font-style: italic;  
+  font-style: italic;
+  align-self: flex-start;
 `
 
 export const PaginateContainer = styled.div`
