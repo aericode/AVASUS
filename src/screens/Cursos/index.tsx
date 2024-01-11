@@ -13,7 +13,7 @@ export function Cursos() {
     <Container>
       <Wrapper>
         <Breadcrumbs rootText={'Início / Cursos /'} currentPageText={' Módulos'} />
-        <StyledHeader>Nossos parceiros</StyledHeader>
+        <StyledHeader>Módulos Educacionais</StyledHeader>
         <PaginationWrapper>
           <PaginatedContent paginationObjectType={'parceiro'} contentArray={parceirosData} />
         </PaginationWrapper>
