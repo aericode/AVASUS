@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: auto;
   max-width: 400px;
-  height: 320px;
+  height: 340px;
 `;
 export const ImageWrapper = styled.div`
   max-width: 350px;

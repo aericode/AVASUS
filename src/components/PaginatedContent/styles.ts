@@ -26,6 +26,8 @@ export const ResultCountText = styled.p`
 export const PaginateContainer = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+
 
   ul {
     display: flex;
@@ -39,9 +41,12 @@ export const PaginateContainer = styled.div`
       user-select: none;
       border: 1px solid ${({ theme }) => theme.COLORS.GRAY_100};
       font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
-      color: ${({ theme }) => theme.COLORS.BLACK};
+      color: ${({ theme }) => theme.COLORS.GRAY_600};
       border-collapse: collapse;
-      padding: 6px 8px;
+      padding: 10px 8px;
+      min-width: 30px;
+      display: flex;
+      justify-content: center;
 
       &.break {
         pointer-events: none;
@@ -50,6 +55,8 @@ export const PaginateContainer = styled.div`
       &:hover {
         text-decoration: underline;
       }
+
+
     }
 
     .active {

@@ -48,12 +48,13 @@ export function PaginatedContent({paginationObjectType, contentArray}: Paginated
 
         <PaginateContainer>
           <ReactPaginate
-            breakLabel="..."
-            nextLabel="próximo >"
+            breakLabel={`...`}
+            nextLabel="próximo>"
             onPageChange={handlePageClick}
             pageRangeDisplayed={5}
+            marginPagesDisplayed={0}
             pageCount={pageCount}
-            previousLabel="< anterior"
+            previousLabel="<anterior"
             renderOnZeroPageCount={null}
             activeClassName={"active"}
             previousClassName={"previousButton"}
