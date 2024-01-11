@@ -10,19 +10,19 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
 `
 
 export const Logo = styled.img`
   display: inline-block;
-  height: 55px;
-  width: auto;
-  padding: 10px;
+  height: auto;
+  width: 200px;
+  padding: 15px;
 `;
 
 
 export const Wrapper = styled.div<ScreenProps>`
-  width: 400px;
+  width: fit-content;
   display: flex;
   flex-direction: ${({ isSmallScreen }) => isSmallScreen ? 'column' : 'row'};
   justify-content: space-between;
@@ -35,5 +35,5 @@ export const StyledText = styled.p`
   color:  ${({ theme }) => theme.COLORS.WHITE};
   size: ${({ theme }) => theme.FONT_SIZE.XL};
 
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 `
