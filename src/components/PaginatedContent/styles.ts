@@ -47,6 +47,7 @@ export const PaginateContainer = styled.div`
       min-width: 30px;
       display: flex;
       justify-content: center;
+      white-space: nowrap;
 
       &.break {
         pointer-events: none;
