@@ -20,6 +20,7 @@ export const CourseImage = styled.img`
 `;
 export const DataSectionWrapper = styled.div`
   max-width: 350px;
+  padding: 0 10px;
 `
 
 export const Title = styled.h3`
