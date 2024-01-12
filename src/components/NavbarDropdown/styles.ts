@@ -22,6 +22,7 @@ export const DropdownList = styled.ul<DropdownListProps>`
   margin: 0;
   list-style: none;
   display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  
 `;
 
 
