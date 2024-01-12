@@ -20,7 +20,7 @@ function App() {
         <Route path="/cursos" element={<Cursos />} />
         <Route path="/parceiros" element={<Parceiros />} />
         <Route path="/transparencia" element={<Transparencia />} />
-        <Route path="/informacoescurso/:idParam" element={<VerCurso />} />
+        <Route path="/vercurso/:idParam" element={<VerCurso />} />
       </Routes>
     </Router>
       <Footer />

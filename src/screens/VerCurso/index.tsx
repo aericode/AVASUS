@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../contexts/DataContext";
 import { Curso } from "../../types/curso";
-import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, Container, CourseName, CourseText, IconBlock, IconLabel, InfoHeader, Partners, Wrapper } from "./styles";
+import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, BannerImage, BannerImageContainer, BannerOverlay, BannerTextWrapper, Container, CourseName, CourseText, IconBlock, IconLabel, InfoHeader, Partners, Wrapper } from "./styles";
 import { ResponsiveFlexWrapper } from "../../components/ResponsiveFlexWrapper";
 import { StyledIcon } from "../../components/StyledIcon";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
@@ -27,55 +27,64 @@ export function VerCurso() {
 
   return (
     <Container>
-      <div>
-        <BannerBreadcrumbRoot>Início / Cursos / Módulos / </BannerBreadcrumbRoot>
-        <BannerBreadcrumbCourseName>
-          {displayedCourse && displayedCourse?.titulo}
-        </BannerBreadcrumbCourseName>
-      </div>
+      <BannerImageContainer>
+        <BannerImage src={displayedCourse && displayedCourse?.capa} />
 
-      <CourseName>{displayedCourse && displayedCourse?.titulo}</CourseName>
-      <Partners>{displayedCourse && displayedCourse?.parceiros}</Partners>
+
+      </BannerImageContainer>
+      <BannerOverlay>
+        <BannerTextWrapper>
+
+          <div>
+            <BannerBreadcrumbRoot>Início / Cursos / Módulos / </BannerBreadcrumbRoot>
+            <BannerBreadcrumbCourseName>
+              {displayedCourse && displayedCourse?.titulo}
+            </BannerBreadcrumbCourseName>
+          </div>
+          <CourseName>{displayedCourse && displayedCourse?.titulo}</CourseName>
+          <Partners>{displayedCourse && displayedCourse?.parceiros}</Partners>
+        </BannerTextWrapper>
+      </BannerOverlay>
 
       <Wrapper>
-      <ResponsiveFlexWrapper>
-        <IconBlock>
-          <StyledIcon icon={faUserGroup} iconSize={25} />
-          <IconLabel>{displayedCourse && displayedCourse?.duracao}</IconLabel>
-        </IconBlock>
+        <ResponsiveFlexWrapper>
+          <IconBlock>
+            <StyledIcon icon={faUserGroup} iconSize={25} />
+            <IconLabel>{displayedCourse && displayedCourse?.duracao}</IconLabel>
+          </IconBlock>
 
-        <IconBlock>
-          <StyledIcon icon={faUserGroup} iconSize={25} />
-          <IconLabel>Desde {displayedCourse && displayedCourse?.criado_em}</IconLabel>
-        </IconBlock>
+          <IconBlock>
+            <StyledIcon icon={faUserGroup} iconSize={25} />
+            <IconLabel>Desde {displayedCourse && displayedCourse?.criado_em}</IconLabel>
+          </IconBlock>
 
 
-        <IconBlock>
-          <StyledIcon icon={faUserGroup} iconSize={25} />
-          <IconLabel>{displayedCourse && addDotsToNumber(displayedCourse?.matriculados)} alunos matriculados</IconLabel>
-        </IconBlock>
+          <IconBlock>
+            <StyledIcon icon={faUserGroup} iconSize={25} />
+            <IconLabel>{displayedCourse && addDotsToNumber(displayedCourse?.matriculados)} alunos matriculados</IconLabel>
+          </IconBlock>
 
-        <IconBlock>
-          <StarRating
-            rating={displayedCourse && displayedCourse?.avaliacao || '0'}
-            fontSize={20}
-            isBold
+          <IconBlock>
+            <StarRating
+              rating={displayedCourse && displayedCourse?.avaliacao || '0'}
+              fontSize={20}
+              isBold
             />
-          <IconLabel>({displayedCourse && addDotsToNumber(displayedCourse?.numero_avaliacoes)} avaliações)</IconLabel>
-        </IconBlock>
-      </ResponsiveFlexWrapper>
+            <IconLabel>({displayedCourse && addDotsToNumber(displayedCourse?.numero_avaliacoes)} avaliações)</IconLabel>
+          </IconBlock>
+        </ResponsiveFlexWrapper>
 
 
-      <InfoHeader>Sobre o Curso</InfoHeader>
-      <CourseText>{displayedCourse && displayedCourse?.sobre}</CourseText>
+        <InfoHeader>Sobre o Curso</InfoHeader>
+        <CourseText>{displayedCourse && displayedCourse?.sobre}</CourseText>
 
-      <InfoHeader>Objetivos</InfoHeader>
-      <CourseText>{displayedCourse && displayedCourse?.objetivo_geral}</CourseText>
-      <CourseText>{displayedCourse && displayedCourse?.objetivo_especifico}</CourseText>
+        <InfoHeader>Objetivos</InfoHeader>
+        <CourseText>{displayedCourse && displayedCourse?.objetivo_geral}</CourseText>
+        <CourseText>{displayedCourse && displayedCourse?.objetivo_especifico}</CourseText>
 
-      {displayedCourse && displayedCourse.recursos_educacionais &&
-      <InfoHeader>Recursos educacionais</InfoHeader>}
-      <CourseText>{displayedCourse && displayedCourse?.recursos_educacionais}</CourseText>
+        {displayedCourse && displayedCourse.recursos_educacionais &&
+          <InfoHeader>Recursos educacionais</InfoHeader>}
+        <CourseText>{displayedCourse && displayedCourse?.recursos_educacionais}</CourseText>
       </Wrapper>
 
     </Container>

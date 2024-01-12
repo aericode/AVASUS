@@ -1,11 +1,44 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-   align-self: center;
+  display: flex;
+  flex-direction: column;
 `;
 export const Wrapper = styled.div`
    max-width: 1110px;
    align-self: center;
+`;
+
+export const BannerImageContainer = styled.div`
+  height: 270px;
+  width: 100%;
+  overflow: hidden;
+  filter: blur(4px);
+  background-color: ${({ theme }) => theme.COLORS.BLACK};
+`;
+
+export const BannerImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+export const BannerOverlay = styled.div`
+  z-index: 10;
+  width: 100%;
+  height: 270px;
+  background-color: red;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const BannerTextWrapper = styled.div`
+  z-index: 10;
+  max-width: 1110px;
 `;
 
 export const BannerBreadcrumbRoot = styled.p`
@@ -27,6 +60,9 @@ export const CourseName = styled.h2`
   font-size: ${({ theme }) => theme.FONT_SIZE.XL3};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};   
   color: ${({ theme }) => theme.COLORS.WHITE};
+
+  margin-top: 60px;
+  margin-bottom: 30px;
 `;
 
 export const Partners = styled.p`
