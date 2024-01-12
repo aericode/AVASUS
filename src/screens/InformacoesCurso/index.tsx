@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../contexts/DataContext";
 import { Curso } from "../../types/curso";
-import { Container } from "./styles";
+import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, Container, CourseName, CourseText, IconLabel, Partners } from "./styles";
 
 export function InformacoesCurso() {
   const { idParam } = useParams();
@@ -22,18 +22,24 @@ export function InformacoesCurso() {
 
   return (
     <Container>
-      <p>id do curso {cursoID}</p>
-      <p>{displayedCourse && displayedCourse?.titulo}</p>
-      <p>{displayedCourse && displayedCourse?.parceiros}</p>
+      <div>
+        <BannerBreadcrumbRoot>Início / Cursos / Módulos / </BannerBreadcrumbRoot>
+        <BannerBreadcrumbCourseName>
+          {displayedCourse && displayedCourse?.titulo}
+        </BannerBreadcrumbCourseName>
+      </div>
 
-      <p>{displayedCourse && displayedCourse?.duracao}</p>
-      <p>{displayedCourse && displayedCourse?.criado_em}</p>
-      <p>{displayedCourse && displayedCourse?.matriculados}</p>
-      <p>{displayedCourse && displayedCourse?.avaliacao}</p>
+      <CourseName>{displayedCourse && displayedCourse?.titulo}</CourseName>
+      <Partners>{displayedCourse && displayedCourse?.parceiros}</Partners>
 
-      <p>{displayedCourse && displayedCourse?.sobre}</p>
-      <p>{displayedCourse && displayedCourse?.objetivo_geral}</p>
-      <p>{displayedCourse && displayedCourse?.objetivo_especifico}</p>
+      <IconLabel>{displayedCourse && displayedCourse?.duracao}</IconLabel>
+      <IconLabel>{displayedCourse && displayedCourse?.criado_em}</IconLabel>
+      <IconLabel>{displayedCourse && displayedCourse?.matriculados}</IconLabel>
+      <IconLabel>{displayedCourse && displayedCourse?.avaliacao}</IconLabel>
+
+      <CourseText>{displayedCourse && displayedCourse?.objetivo_geral}</CourseText>
+      <CourseText>{displayedCourse && displayedCourse?.objetivo_especifico}</CourseText>
+      <CourseText>{displayedCourse && displayedCourse?.sobre}</CourseText>
 
 
     </Container>
