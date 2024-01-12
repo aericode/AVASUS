@@ -3,10 +3,11 @@ import { theme } from '../../theme'
 import { Container, NumberRating } from './style'
 
 interface StarRatingProps {
+  fontSize: number,
   rating: string
 }
 
-export function StarRating({rating}: StarRatingProps) {
+export function StarRating({fontSize, rating}: StarRatingProps) {
 
 
   return (
@@ -15,9 +16,9 @@ export function StarRating({rating}: StarRatingProps) {
       fillColor = {theme.COLORS.RED_300}
       initialValue={ Math.round(Number(rating)) || 0}
       readonly
-      size={20}
+      size={fontSize+5}
       />
-      <NumberRating>
+      <NumberRating fontSize={fontSize}>
         {rating}
       </NumberRating>
     </Container>

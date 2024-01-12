@@ -5,8 +5,12 @@ export const Container = styled.div`
    align-items: center;
 `;
 
-export const NumberRating = styled.p`
-font-size: ${({ theme }) => theme.FONT_SIZE.SM};
+interface NumberRatingProps {
+  fontSize: number
+}
+
+export const NumberRating = styled.p<NumberRatingProps>`
+  font-size: ${({ fontSize }) => fontSize};
   color: ${({ theme }) => theme.COLORS.GRAY_800};
-  margin-left: 3px;
+  margin-left: 4px;
 `;

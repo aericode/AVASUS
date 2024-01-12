@@ -6,7 +6,7 @@ import { PaginatedContent } from '../../components/PaginatedContent';
 
 
 export function Cursos() {
-  const { parceirosData } = useContext(DataContext)!;
+  const { cursosData } = useContext(DataContext)!;
 
 
   return (
@@ -15,7 +15,7 @@ export function Cursos() {
         <Breadcrumbs rootText={'Início / Cursos /'} currentPageText={' Módulos'} />
         <StyledHeader>Módulos Educacionais</StyledHeader>
         <PaginationWrapper>
-          <PaginatedContent paginationObjectType={'parceiro'} contentArray={parceirosData} />
+          <PaginatedContent paginationObjectType={'curso'} contentArray={cursosData} />
         </PaginationWrapper>
       </Wrapper>
     </Container>

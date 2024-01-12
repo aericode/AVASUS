@@ -38,7 +38,7 @@ export function FeaturedCourse({ curso }: FeaturedCourseProps) {
                 <StyledIcon icon={faClock} />
                 <InfoText>{curso.duracao}</InfoText>
               </IconTextWrapper>
-              <StarRating rating={curso.avaliacao} />
+              <StarRating rating={curso.avaliacao} fontSize={16} />
             </InfoWrapper>
 
             <SeeModuleButton>

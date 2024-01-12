@@ -5,6 +5,7 @@ import { PartnerCard } from '../../components/PartnerCard';
 import { Parceiro } from '../../types/parceiro';
 import ReactPaginate from 'react-paginate';
 import { Curso } from '../../types/curso';
+import { CourseCard } from '../CourseCard';
 
 interface PaginatedContentProps {
   paginationObjectType: "parceiro"|"curso"
@@ -39,8 +40,18 @@ export function PaginatedContent({paginationObjectType, contentArray}: Paginated
         <PageWrapper>
           <PaginationPageDisplay>
             {currentItems && currentItems.map((contentItem, index) => (
-              paginationObjectType==="parceiro" && (<PartnerCard key={index} parceiro={contentItem} />
-              )
+              
+              paginationObjectType==="parceiro" ? 
+              <PartnerCard
+                key={index}
+                parceiro={contentItem as Parceiro}
+              />
+              :
+              <CourseCard
+                key={index}
+                curso={contentItem as Curso}
+              /> 
+              
             ))}
           </PaginationPageDisplay>
         </PageWrapper>
