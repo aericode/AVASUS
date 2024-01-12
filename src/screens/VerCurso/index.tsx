@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../contexts/DataContext";
 import { Curso } from "../../types/curso";
-import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, BannerImage, BannerImageContainer, BannerOverlay, BannerTextWrapper, Container, CourseName, CourseText, IconBlock, IconLabel, InfoHeader, Partners, Wrapper } from "./styles";
+import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, BannerImage, BannerImageContainer, BannerOverlay, BannerTextWrapper, Container, CourseName, CourseText, CourseTextHeader, IconBlock, IconLabel, InfoHeader, Partners, SectionName, Wrapper } from "./styles";
 import { ResponsiveFlexWrapper } from "../../components/ResponsiveFlexWrapper";
 import { StyledIcon } from "../../components/StyledIcon";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
@@ -34,7 +34,6 @@ export function VerCurso() {
       </BannerImageContainer>
       <BannerOverlay>
         <BannerTextWrapper>
-
           <div>
             <BannerBreadcrumbRoot>Início / Cursos / Módulos / </BannerBreadcrumbRoot>
             <BannerBreadcrumbCourseName>
@@ -47,6 +46,7 @@ export function VerCurso() {
       </BannerOverlay>
 
       <Wrapper>
+        <SectionName>Informações Gerais do Curso</SectionName>
         <ResponsiveFlexWrapper>
           <IconBlock>
             <StyledIcon icon={faUserGroup} iconSize={25} />
@@ -78,10 +78,26 @@ export function VerCurso() {
         <InfoHeader>Sobre o Curso</InfoHeader>
         <CourseText>{displayedCourse && displayedCourse?.sobre}</CourseText>
 
-        <InfoHeader>Objetivos</InfoHeader>
-        <CourseText>{displayedCourse && displayedCourse?.objetivo_geral}</CourseText>
-        <CourseText>{displayedCourse && displayedCourse?.objetivo_especifico}</CourseText>
-
+        {
+          displayedCourse && (displayedCourse.objetivo_geral || displayedCourse.objetivo_especifico) &&
+          (
+            <>
+              <InfoHeader>Objetivos</InfoHeader>
+              {displayedCourse.objetivo_geral &&
+                <>
+                  <CourseTextHeader>Objetivos Gerais</CourseTextHeader>
+                  <CourseText>{displayedCourse?.objetivo_geral}</CourseText>
+                </>
+              }
+              {displayedCourse.objetivo_especifico &&
+                <>
+                  <CourseTextHeader>Objetivos Específicos</CourseTextHeader>
+                  <CourseText>{displayedCourse?.objetivo_especifico}</CourseText>
+                </>
+              }
+            </>
+          )
+        }
         {displayedCourse && displayedCourse.recursos_educacionais &&
           <InfoHeader>Recursos educacionais</InfoHeader>}
         <CourseText>{displayedCourse && displayedCourse?.recursos_educacionais}</CourseText>

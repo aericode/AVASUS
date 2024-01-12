@@ -15,7 +15,7 @@ export const BannerImageContainer = styled.div`
   width: 100%;
   overflow: hidden;
   filter: blur(4px);
-  background-color: ${({ theme }) => theme.COLORS.BLACK};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_200};
 
 `;
 
@@ -78,6 +78,11 @@ export const SectionName = styled.h2`
   font-size: ${({ theme }) => theme.FONT_SIZE.XL3};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};   
   color: ${({ theme }) => theme.COLORS.RED_500};
+
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
 `;
 
 export const IconBlock = styled.div`
@@ -100,6 +105,10 @@ export const InfoHeader = styled.h4`
   font-size: ${({ theme }) => theme.FONT_SIZE.XL};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};   
   color: ${({ theme }) => theme.COLORS.RED_500};
+  text-align: center;
+  margin-bottom: 30px;
+
+
 `;
 
 export const CourseTextHeader = styled.h5`
@@ -112,4 +121,5 @@ export const CourseText = styled.p`
   font-size: ${({ theme }) => theme.FONT_SIZE.SM};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};   
   color: ${({ theme }) => theme.COLORS.BLACK};
+  line-height: 20px;
 `;
