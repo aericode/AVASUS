@@ -31,11 +31,11 @@ export function FeaturedCourse({ curso }: FeaturedCourseProps) {
             </ResponsivityWrapper>
             <InfoWrapper>
               <IconTextWrapper>
-                <StyledIcon icon={faUserGroup} />
+                <StyledIcon icon={faUserGroup} iconSize={24}/>
                 <InfoText>{curso.matriculados}</InfoText>
               </IconTextWrapper>
               <IconTextWrapper>
-                <StyledIcon icon={faClock} />
+                <StyledIcon icon={faClock} iconSize={24}/>
                 <InfoText>{curso.duracao}</InfoText>
               </IconTextWrapper>
               <StarRating rating={curso.avaliacao} fontSize={16} />

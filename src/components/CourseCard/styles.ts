@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: auto;
   max-width: 400px;
-  height: 340px;
-  cursor: pointer;
 `;
 export const ImageWrapper = styled.div`
   max-width: 350px;
@@ -20,13 +18,80 @@ export const CourseImage = styled.img`
   border-radius: 20px;
   object-fit: contain;
 `;
+export const DataSectionWrapper = styled.div`
+  max-width: 350px;
+`
 
-export const PartnerName = styled.p`
+export const Title = styled.h3`
   font-size: ${({ theme }) => theme.FONT_SIZE.XL};
   color: ${({ theme }) => theme.COLORS.GRAY_800};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
-  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 
-  border-top: 3px solid ${({ theme }) => theme.COLORS.RED_300};
-  padding-top: 10px;
+  margin: 8px 0;
+`;
+
+export const Partners = styled.p`
+  font-size: ${({ theme }) => theme.FONT_SIZE.XSM};
+  color: ${({ theme }) => theme.COLORS.RED_300};
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
+`;
+
+export const IconLabel = styled.p`
+  font-size: ${({ theme }) => theme.FONT_SIZE.XSM};
+  color: ${({ theme }) => theme.COLORS.GRAY_800};
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};
+
+  margin-left: 3px;
+`;
+
+export const IconSectionWrapper = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+`
+export const SectionContainer = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+margin: 5px 0;
+padding-right: 5px;
+`
+
+export const ResumeText = styled.p`
+  font-size: 15px;
+  color: ${({ theme }) => theme.COLORS.GRAY_800};
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+`;
+
+export const CourseLinkWrapper = styled.div`
+display: flex;
+justify-content: flex-end;
+`
+
+export const CourseLink = styled.a`
+  margin-top: 5px;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  font-size: ${({ theme }) => theme.FONT_SIZE.MD};
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
+
+  color: ${({ theme }) => theme.COLORS.GRAY_200};
+
+
+  &:hover {
+    color: ${({ theme }) => theme.COLORS.RED_300};
+    text-decoration: underline;
+  }
 `;
