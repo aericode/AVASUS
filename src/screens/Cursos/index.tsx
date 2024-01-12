@@ -3,6 +3,7 @@ import { Container, PaginationWrapper, StyledHeader, Wrapper } from './styles';
 import { useContext } from 'react';
 import { DataContext } from '../../contexts/DataContext';
 import { PaginatedContent } from '../../components/PaginatedContent';
+import { FilterSelector } from '../../components/FilterSelector';
 
 
 export function Cursos() {
@@ -14,6 +15,7 @@ export function Cursos() {
       <Wrapper>
         <Breadcrumbs rootText={'Início / Cursos /'} currentPageText={' Módulos'} />
         <StyledHeader>Módulos Educacionais</StyledHeader>
+        <FilterSelector />
         <PaginationWrapper>
           <PaginatedContent paginationObjectType={'curso'} contentArray={cursosData} />
         </PaginationWrapper>

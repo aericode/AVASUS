@@ -7,6 +7,7 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
    max-width: 1110px;
    align-self: center;
+   
 `;
 
 export const BannerImageContainer = styled.div`
@@ -15,6 +16,7 @@ export const BannerImageContainer = styled.div`
   overflow: hidden;
   filter: blur(4px);
   background-color: ${({ theme }) => theme.COLORS.BLACK};
+
 `;
 
 export const BannerImage = styled.img`
@@ -38,6 +40,7 @@ export const BannerOverlay = styled.div`
 
 export const BannerTextWrapper = styled.div`
   z-index: 10;
+  width: 80vw;
   max-width: 1110px;
 `;
 
@@ -81,14 +84,15 @@ export const IconBlock = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 10px;
+  margin: 20px 0;
+  margin-right: 20px;
 `;
 
 export const IconLabel = styled.p`
   font-size: ${({ theme }) => theme.FONT_SIZE.LG};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};   
   color: ${({ theme }) => theme.COLORS.GRAY_800};
-  margin-left: 5px;
+  margin-left: 6px;
   cursor: default;
 `;
 
