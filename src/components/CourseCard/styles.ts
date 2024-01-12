@@ -60,7 +60,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 margin: 5px 0;
-padding-right: 5px;
+margin-right: 10px;
 `
 
 export const ResumeText = styled.p`

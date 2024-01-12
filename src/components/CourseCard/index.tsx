@@ -1,9 +1,9 @@
 import { faClock, faUserGroup } from "@fortawesome/free-solid-svg-icons";
-import { theme } from "../../theme";
 import { Curso } from "../../types/curso";
 import { StarRating } from "../StarRating";
 import { Container, ImageWrapper, CourseImage, Title, Partners, IconLabel, ResumeText, IconSectionWrapper, SectionContainer, DataSectionWrapper, CourseLink, CourseLinkWrapper } from "./styles";
 import { StyledIcon } from "../StyledIcon";
+import { addDotsToNumber } from "../../utils/addDotsToNumber";
 
 interface CourseCardProps {
   curso?: Curso
@@ -25,7 +25,7 @@ export function CourseCard({ curso }: CourseCardProps) {
           <SectionContainer>
             <SectionContainer>
               <StyledIcon icon={faUserGroup} iconSize={19} />
-              <IconLabel>{curso && curso.matriculados}</IconLabel>
+              <IconLabel>{curso && addDotsToNumber(curso.matriculados)}</IconLabel>
             </SectionContainer>
 
             <SectionContainer>
