@@ -20,7 +20,7 @@ export const CourseImage = styled.img`
 `;
 export const DataSectionWrapper = styled.div`
   max-width: 350px;
-  padding: 0 10px;
+  padding: 0 7px;
 `
 
 export const Title = styled.h3`
@@ -33,7 +33,7 @@ export const Title = styled.h3`
   line-clamp: 3;
   -webkit-box-orient: vertical;
 
-  margin: 8px 0;
+  margin: 10px 0;
 `;
 
 export const Partners = styled.p`

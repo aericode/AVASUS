@@ -5,6 +5,7 @@ import { faClock, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { StarRating } from "../StarRating";
 import { StyledIcon } from "../StyledIcon";
 import { useScreen } from "../../contexts/ScreenSizeContext";
+import { addDotsToNumber } from "../../utils/addDotsToNumber";
 
 interface FeaturedCourseProps {
   curso: Curso;
@@ -32,7 +33,7 @@ export function FeaturedCourse({ curso }: FeaturedCourseProps) {
             <InfoWrapper>
               <IconTextWrapper>
                 <StyledIcon icon={faUserGroup} iconSize={24}/>
-                <InfoText>{curso.matriculados}</InfoText>
+                <InfoText>{curso && addDotsToNumber(curso.matriculados)}</InfoText>
               </IconTextWrapper>
               <IconTextWrapper>
                 <StyledIcon icon={faClock} iconSize={24}/>
