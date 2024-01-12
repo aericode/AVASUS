@@ -2,7 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../contexts/DataContext";
 import { Curso } from "../../types/curso";
-import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, Container, CourseName, CourseText, IconLabel, Partners } from "./styles";
+import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, Container, CourseName, CourseText, IconBlock, IconLabel, InfoHeader, Partners, Wrapper } from "./styles";
+import { ResponsiveFlexWrapper } from "../../components/ResponsiveFlexWrapper";
+import { StyledIcon } from "../../components/StyledIcon";
+import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { StarRating } from "../../components/StarRating";
+import { addDotsToNumber } from "../../utils/addDotsToNumber";
 
 export function InformacoesCurso() {
   const { idParam } = useParams();
@@ -32,15 +37,46 @@ export function InformacoesCurso() {
       <CourseName>{displayedCourse && displayedCourse?.titulo}</CourseName>
       <Partners>{displayedCourse && displayedCourse?.parceiros}</Partners>
 
-      <IconLabel>{displayedCourse && displayedCourse?.duracao}</IconLabel>
-      <IconLabel>{displayedCourse && displayedCourse?.criado_em}</IconLabel>
-      <IconLabel>{displayedCourse && displayedCourse?.matriculados}</IconLabel>
-      <IconLabel>{displayedCourse && displayedCourse?.avaliacao}</IconLabel>
+      <Wrapper>
+      <ResponsiveFlexWrapper>
+        <IconBlock>
+          <StyledIcon icon={faUserGroup} iconSize={25} />
+          <IconLabel>{displayedCourse && displayedCourse?.duracao}</IconLabel>
+        </IconBlock>
 
-      <CourseText>{displayedCourse && displayedCourse?.objetivo_geral}</CourseText>
-      <CourseText>{displayedCourse && displayedCourse?.objetivo_especifico}</CourseText>
+        <IconBlock>
+          <StyledIcon icon={faUserGroup} iconSize={25} />
+          <IconLabel>Desde {displayedCourse && displayedCourse?.criado_em}</IconLabel>
+        </IconBlock>
+
+
+        <IconBlock>
+          <StyledIcon icon={faUserGroup} iconSize={25} />
+          <IconLabel>{displayedCourse && addDotsToNumber(displayedCourse?.matriculados)} alunos matriculados</IconLabel>
+        </IconBlock>
+
+        <IconBlock>
+          <StarRating
+            rating={displayedCourse && displayedCourse?.avaliacao || '0'}
+            fontSize={20}
+            isBold
+            />
+          <IconLabel>({displayedCourse && addDotsToNumber(displayedCourse?.numero_avaliacoes)} avaliações)</IconLabel>
+        </IconBlock>
+      </ResponsiveFlexWrapper>
+
+
+      <InfoHeader>Sobre o Curso</InfoHeader>
       <CourseText>{displayedCourse && displayedCourse?.sobre}</CourseText>
 
+      <InfoHeader>Objetivos</InfoHeader>
+      <CourseText>{displayedCourse && displayedCourse?.objetivo_geral}</CourseText>
+      <CourseText>{displayedCourse && displayedCourse?.objetivo_especifico}</CourseText>
+
+      {displayedCourse && displayedCourse.recursos_educacionais &&
+      <InfoHeader>Recursos educacionais</InfoHeader>}
+      <CourseText>{displayedCourse && displayedCourse?.recursos_educacionais}</CourseText>
+      </Wrapper>
 
     </Container>
 

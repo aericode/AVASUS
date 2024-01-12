@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-   
+   align-self: center;
+`;
+export const Wrapper = styled.div`
+   max-width: 1110px;
+   align-self: center;
 `;
 
 export const BannerBreadcrumbRoot = styled.p`
@@ -37,10 +41,19 @@ export const SectionName = styled.h2`
   color: ${({ theme }) => theme.COLORS.RED_500};
 `;
 
+export const IconBlock = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 10px;
+`;
+
 export const IconLabel = styled.p`
   font-size: ${({ theme }) => theme.FONT_SIZE.LG};
-  font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};   
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};   
   color: ${({ theme }) => theme.COLORS.GRAY_800};
+  margin-left: 5px;
+  cursor: default;
 `;
 
 export const InfoHeader = styled.h4`

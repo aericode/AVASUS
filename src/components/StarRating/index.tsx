@@ -4,10 +4,11 @@ import { Container, NumberRating } from './style'
 
 interface StarRatingProps {
   fontSize: number,
-  rating: string
+  rating: string,
+  isBold?: boolean
 }
 
-export function StarRating({fontSize, rating}: StarRatingProps) {
+export function StarRating({fontSize, rating, isBold}: StarRatingProps) {
 
 
   return (
@@ -18,7 +19,7 @@ export function StarRating({fontSize, rating}: StarRatingProps) {
       readonly
       size={fontSize+5}
       />
-      <NumberRating fontSize={fontSize}>
+      <NumberRating fontSize={fontSize} isBold={isBold}>
         {rating}
       </NumberRating>
     </Container>
