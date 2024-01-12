@@ -1,49 +1,32 @@
 import { DropdownContainer, DropdownItem, DropdownList, NavLink } from "./styles";
 
+interface DropdownBlockProps{
+  link: string,
+  text: string
+}
+
+function DropdownBlock({link, text}:DropdownBlockProps){
+  return(
+  <DropdownItem>
+    <NavLink href={link}>
+      {text}
+    </NavLink>
+  </DropdownItem>
+  )
+}
+
 export function NavbarDropdown() {
   return (
     <DropdownContainer>
       <DropdownList isOpen={true}>
-        <DropdownItem>
-          <NavLink href="/">
-            Início
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem>
-          <NavLink href="#">
-            Sobre Nós
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem>
-          <NavLink href="/cursos">
-            Cursos
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem>
-          <NavLink href="/parceiros">
-            Parceiros
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem>
-          <NavLink href="/transparencia">
-            Transparência
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem>
-          <NavLink href="#">
-            Contato
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem>
-          <NavLink href="#">
-            Entrar
-          </NavLink>
-        </DropdownItem>
-        <DropdownItem>
-          <NavLink href="#">
-            Cadastrar
-          </NavLink>
-        </DropdownItem>
+        <DropdownBlock link={'/'} text={'Início'} />
+        <DropdownBlock link={'#'} text={'Sobre Nós'} />
+        <DropdownBlock link={'/cursos'} text={'Cursos'} />
+        <DropdownBlock link={'/parceiros'} text={'Parceiros'} />
+        <DropdownBlock link={'/transparencia'} text={'Transparência'} />
+        <DropdownBlock link={'#'} text={'Contato'} />
+        <DropdownBlock link={'#'} text={'Entrar'} />
+        <DropdownBlock link={'#'} text={'Cadastrar'} />
       </DropdownList>
     </DropdownContainer>
   )
