@@ -65,8 +65,8 @@ padding-right: 5px;
 
 export const ResumeText = styled.p`
   font-size: 15px;
-  color: ${({ theme }) => theme.COLORS.GRAY_800};
-  font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
+  color: ${({ theme }) => theme.COLORS.GRAY_500};
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.MEDIUM};
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 5;
