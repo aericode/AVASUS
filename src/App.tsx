@@ -7,7 +7,7 @@ import {Inicio} from '../src/screens/Inicio';
 import { Transparencia } from './screens/Transparencia';
 import { Cursos } from './screens/Cursos';
 import { Parceiros } from './screens/Parceiros';
-import { InformacoesCurso } from './screens/InformacoesCurso';
+import { VerCurso } from './screens/VerCurso';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
         <Route path="/cursos" element={<Cursos />} />
         <Route path="/parceiros" element={<Parceiros />} />
         <Route path="/transparencia" element={<Transparencia />} />
-        <Route path="/informacoescurso/:idParam" element={<InformacoesCurso />} />
+        <Route path="/informacoescurso/:idParam" element={<VerCurso />} />
       </Routes>
     </Router>
       <Footer />

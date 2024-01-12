@@ -9,7 +9,7 @@ import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { StarRating } from "../../components/StarRating";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
 
-export function InformacoesCurso() {
+export function VerCurso() {
   const { idParam } = useParams();
   const { cursosData } = useContext(DataContext)!;
 
