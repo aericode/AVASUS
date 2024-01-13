@@ -4,15 +4,17 @@ import { StarRating } from "../StarRating";
 import { Container, ImageWrapper, CourseImage, Title, Partners, IconLabel, ResumeText, IconSectionWrapper, SectionContainer, DataSectionWrapper, CourseLink, CourseLinkWrapper } from "./styles";
 import { StyledIcon } from "../StyledIcon";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
+import { useScreen } from "../../contexts/ScreenSizeContext";
 
 interface CourseCardProps {
   curso?: Curso
 }
 
 export function CourseCard({ curso }: CourseCardProps) {
+  const { isSmallScreen } = useScreen();
 
   return (
-    <Container>
+    <Container isSmallScreen={isSmallScreen}>
       <ImageWrapper>
         <CourseImage src={curso?.capa || ''} />
       </ImageWrapper>

@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface ContainerProps{
+  isSmallScreen: boolean
+}
+
+export const Container = styled.div<ContainerProps>`
   width: auto;
   max-width: 400px;
+  margin-bottom: ${({ isSmallScreen }) => isSmallScreen ? '15px' : '0px'};
 `;
 export const ImageWrapper = styled.div`
   max-width: 350px;
