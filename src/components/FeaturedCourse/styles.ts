@@ -75,28 +75,27 @@ export const IconTextWrapper = styled.div`
    align-items: center;
 `
 
-export const SeeModuleButton = styled.button`
+export const SeeModuleButton = styled.a`
   padding: 10px 35px;
   background-color: ${({ theme }) => theme.COLORS.GRAY_200};
-  color:  ${({ theme }) => theme.COLORS.WHITE};
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-size: ${({ theme }) => theme.FONT_SIZE.SM};
-  height: 40px;
 
+  font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
+  font-size: ${({ theme }) => theme.FONT_SIZE.LG};
+  color:  ${({ theme }) => theme.COLORS.WHITE};
+  white-space: nowrap;
+
+  text-decoration: none;
   &:hover {
     opacity: 0.8;
   }
 `;
 
 
-export const SeeModuleText = styled.p`
-  font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
-  font-size: ${({ theme }) => theme.FONT_SIZE.LG};
-  color:  ${({ theme }) => theme.COLORS.WHITE};
-  white-space: nowrap;
-`
+
 export const CardPadding = styled.div`
   padding: 10px;
 `

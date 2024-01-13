@@ -15,9 +15,11 @@ export function CourseCard({ curso }: CourseCardProps) {
 
   return (
     <Container isSmallScreen={isSmallScreen}>
-      <ImageWrapper>
-        <CourseImage src={curso?.capa || ''} />
-      </ImageWrapper>
+      <a href={`/vercurso/${curso?.id}` || '#'}>
+        <ImageWrapper>
+          <CourseImage src={curso?.capa || ''} />
+        </ImageWrapper>
+      </a>
       <DataSectionWrapper>
 
 
@@ -41,7 +43,7 @@ export function CourseCard({ curso }: CourseCardProps) {
         </IconSectionWrapper>
         <ResumeText>{curso && curso.resumo}</ResumeText>
         <CourseLinkWrapper>
-          <CourseLink>Ver curso</CourseLink>
+          <CourseLink href={`/vercurso/${curso?.id}` || '#'}>Ver curso</CourseLink>
         </CourseLinkWrapper>
       </DataSectionWrapper>
     </Container>

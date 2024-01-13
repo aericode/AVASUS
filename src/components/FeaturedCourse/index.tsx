@@ -1,6 +1,6 @@
 import { Curso } from "../../types/curso";
 import { ContentCard } from "../ContentCard";
-import { CardPadding, Container, CoursePartners, CourseTitle, IconTextWrapper, InfoText, InfoWrapper, ResponsivityWrapper, SeeModuleButton, SeeModuleText, TextWrapper, Thumbnail, Wrapper } from "./styles";
+import { CardPadding, Container, CoursePartners, CourseTitle, IconTextWrapper, InfoText, InfoWrapper, ResponsivityWrapper, SeeModuleButton, TextWrapper, Thumbnail, Wrapper } from "./styles";
 import { faClock, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { StarRating } from "../StarRating";
 import { StyledIcon } from "../StyledIcon";
@@ -20,7 +20,9 @@ export function FeaturedCourse({ curso }: FeaturedCourseProps) {
         <CardPadding>
           <Wrapper isSmallScreen={isSmallScreen}>
             <ResponsivityWrapper>
-              <Thumbnail src={curso.capa} />
+              <a href={`/vercurso/${curso?.id}` || '#'}>
+                <Thumbnail src={curso.capa} />
+              </a>
               <TextWrapper>
                 <CourseTitle>
                   {curso.titulo}
@@ -32,20 +34,18 @@ export function FeaturedCourse({ curso }: FeaturedCourseProps) {
             </ResponsivityWrapper>
             <InfoWrapper>
               <IconTextWrapper>
-                <StyledIcon icon={faUserGroup} iconSize={24}/>
+                <StyledIcon icon={faUserGroup} iconSize={24} />
                 <InfoText>{curso && addDotsToNumber(curso.matriculados)}</InfoText>
               </IconTextWrapper>
               <IconTextWrapper>
-                <StyledIcon icon={faClock} iconSize={24}/>
+                <StyledIcon icon={faClock} iconSize={24} />
                 <InfoText>{curso.duracao}</InfoText>
               </IconTextWrapper>
               <StarRating rating={curso.avaliacao} fontSize={16} />
             </InfoWrapper>
 
-            <SeeModuleButton>
-              <SeeModuleText>
+            <SeeModuleButton href={`/vercurso/${curso?.id}` || '#'}>
                 Ver Módulo
-              </SeeModuleText>
             </SeeModuleButton>
           </Wrapper>
         </CardPadding>

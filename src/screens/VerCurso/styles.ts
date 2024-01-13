@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   max-width: 1110px;
   align-self: center;
   padding: 0 15px;
+  margin-bottom: 110px;
       
 `;
 
@@ -60,13 +61,18 @@ export const BannerBreadcrumbCourseName = styled.p`
 
 `;
 
-export const CourseName = styled.h2`
+interface CourseNameProps{
+  isSmallScreen: boolean
+}
+
+export const CourseName = styled.h2<CourseNameProps>`
   font-size: ${({ theme }) => theme.FONT_SIZE.XL3};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};   
   color: ${({ theme }) => theme.COLORS.WHITE};
 
-  margin-top: 60px;
-  margin-bottom: 30px;
+  margin-top: ${({ isSmallScreen }) => isSmallScreen ? '10px' : '60px'};
+
+  margin-bottom: ${({ isSmallScreen }) => isSmallScreen ? '10px' : '30px'};
 `;
 
 export const Partners = styled.p`

@@ -9,10 +9,13 @@ import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { StarRating } from "../../components/StarRating";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
 import { CoursePartnersDisplay } from "../../components/CoursePartnersDisplay";
+import { useScreen } from "../../contexts/ScreenSizeContext";
 
 export function VerCurso() {
   const { idParam } = useParams();
   const { cursosData } = useContext(DataContext)!;
+  const { isSmallScreen } = useScreen();
+
 
   const [cursoID, setCursoID] = useState<number | undefined>()
   const [displayedCourse, setDisplayedCourse] = useState<Curso | undefined>()
@@ -41,7 +44,7 @@ export function VerCurso() {
               {displayedCourse && displayedCourse?.titulo}
             </BannerBreadcrumbCourseName>
           </div>
-          <CourseName>{displayedCourse && displayedCourse?.titulo}</CourseName>
+          <CourseName isSmallScreen={isSmallScreen}>{displayedCourse && displayedCourse?.titulo}</CourseName>
           <Partners>{displayedCourse && displayedCourse?.parceiros}</Partners>
         </BannerTextWrapper>
       </BannerOverlay>
