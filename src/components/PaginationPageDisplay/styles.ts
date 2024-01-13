@@ -7,3 +7,8 @@ width: 100%;
   grid-template-rows: repeat(2, 1fr);
   gap: 30px;
 `;
+
+export const List = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

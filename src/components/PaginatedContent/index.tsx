@@ -59,7 +59,7 @@ export function PaginatedContent({paginationObjectType, contentArray}: Paginated
 
         <PaginateContainer>
           <ReactPaginate
-            breakLabel={`...`}
+            breakLabel={null}
             nextLabel="próximo >"
             onPageChange={handlePageClick}
             pageRangeDisplayed={5}

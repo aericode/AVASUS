@@ -8,6 +8,7 @@ import { StyledIcon } from "../../components/StyledIcon";
 import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { StarRating } from "../../components/StarRating";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
+import { CoursePartnersDisplay } from "../../components/CoursePartnersDisplay";
 
 export function VerCurso() {
   const { idParam } = useParams();
@@ -99,8 +100,15 @@ export function VerCurso() {
           )
         }
         {displayedCourse && displayedCourse.recursos_educacionais &&
-          <InfoHeader>Recursos educacionais</InfoHeader>}
-        <CourseText>{displayedCourse && displayedCourse?.recursos_educacionais}</CourseText>
+          <>
+            <InfoHeader>Recursos educacionais</InfoHeader>
+            <CourseText>{displayedCourse.recursos_educacionais}</CourseText>
+          </>
+
+        }
+        <InfoHeader>Créditos</InfoHeader>
+        {displayedCourse&& <CoursePartnersDisplay curso={displayedCourse}/>}
+
       </Wrapper>
 
     </Container>

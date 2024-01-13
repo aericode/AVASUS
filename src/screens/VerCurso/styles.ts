@@ -5,13 +5,14 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 export const Wrapper = styled.div`
-   max-width: 1110px;
-   align-self: center;
-   
+  max-width: 1110px;
+  align-self: center;
+  padding: 0 15px;
+      
 `;
 
 export const BannerImageContainer = styled.div`
-  height: 270px;
+  height: 290px;
   width: 100%;
   overflow: hidden;
   filter: blur(4px);
@@ -28,7 +29,7 @@ export const BannerImage = styled.img`
 export const BannerOverlay = styled.div`
   z-index: 10;
   width: 100%;
-  height: 270px;
+  height: 290px;
   background-color: red;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
@@ -115,6 +116,7 @@ export const CourseTextHeader = styled.h5`
   font-size: ${({ theme }) => theme.FONT_SIZE.SM};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};   
   color: ${({ theme }) => theme.COLORS.BLACK};
+  margin-bottom: 13px;
 `;
 
 export const CourseText = styled.p`
@@ -122,4 +124,5 @@ export const CourseText = styled.p`
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.REGULAR};   
   color: ${({ theme }) => theme.COLORS.BLACK};
   line-height: 20px;
+  margin-bottom: 30px;
 `;
