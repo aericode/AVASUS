@@ -12,7 +12,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 interface DataDisplayItemProps {
   icon: IconProp,
   dataName: string,
-  displayedData?: string
+  displayedData?: string|number
 }
 
 function DataDisplayItem({ icon, dataName, displayedData }: DataDisplayItemProps) {
@@ -37,22 +37,22 @@ export function TransparencyDataDisplay() {
           <StyledTitle>Dados Gerais</StyledTitle>
           <ResponsiveFlexWrapper>
             <LineWrapper>
-              <DataBlock
+              <DataDisplayItem
                 icon={faUserGroup}
                 dataName={"Total de usuários registrados"}
                 displayedData={transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.usuarios_registrados)}
               />
-              <DataBlock
+              <DataDisplayItem
                 icon={faFileArrowUp}
                 dataName={"Inscrições realizadas"}
                 displayedData={transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.incricoes_realizadas)}
               />
-              <DataBlock
+              <DataDisplayItem
                 icon={faGraduationCap}
                 dataName={"Cursos ativos"}
                 displayedData={transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.cursos_ativos)}
               />
-              <DataBlock
+              <DataDisplayItem
                 icon={faAward}
                 dataName={"Direito à Certificação"}
                 displayedData={transparenciaData && transparenciaData!.dados_gerais.direito_certificacao}
@@ -61,12 +61,12 @@ export function TransparencyDataDisplay() {
           </ResponsiveFlexWrapper>
           <ResponsiveFlexWrapper>
             <LineWrapper>
-              <DataBlock
+              <DataDisplayItem
                 icon={faGraduationCap}
                 dataName={"Investimento médio por curso"}
                 displayedData={transparenciaData && transparenciaData!.dados_gerais.investimento_medio_curso}
               />
-              <DataBlock
+              <DataDisplayItem
                 icon={faUser}
                 dataName={"Investimento médio por aluno"}
                 displayedData={transparenciaData && transparenciaData!.dados_gerais.investimento_medio_aluno}
