@@ -1,5 +1,4 @@
 import { ContentCard } from "../ContentCard";
-import { ResponsiveFlexWrapper } from "../ResponsiveFlexWrapper";
 import { Container, PartnerBlock, PartnerName, PartnerSectionWrapper, PartnerTitle, StyledHeader } from "./styles";
 
 interface PartnerDisplayBlockProps {

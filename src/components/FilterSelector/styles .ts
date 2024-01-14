@@ -4,10 +4,6 @@ export const Container = styled.div`
 
 `
 
-interface FilterButtonProps{
-  isSmallScreen: boolean
-}
-
 export const FilterButtonDesktop = styled.div`
 font-size: ${({ theme }) => theme.FONT_SIZE.LG };
 font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD };
@@ -21,8 +17,6 @@ cursor: pointer;
     text-decoration:underline;
   }
 `
-
-
 
 export const FilterButtonMobile = styled.div`
 text-align: center;
