@@ -43,8 +43,8 @@ export const PaginateContainer = styled.div`
       font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
       color: ${({ theme }) => theme.COLORS.GRAY_600};
       border-collapse: collapse;
-      padding: 10px 8px;
-      min-width: 30px;
+      padding: 10px 5px;
+      min-width: 20px;
       display: flex;
       justify-content: center;
       white-space: nowrap;

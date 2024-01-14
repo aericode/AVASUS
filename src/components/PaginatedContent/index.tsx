@@ -62,7 +62,7 @@ export function PaginatedContent({paginationObjectType, contentArray}: Paginated
             breakLabel={null}
             nextLabel="próximo >"
             onPageChange={handlePageClick}
-            pageRangeDisplayed={5}
+            pageRangeDisplayed={4}
             marginPagesDisplayed={0}
             pageCount={pageCount}
             previousLabel="< anterior"
