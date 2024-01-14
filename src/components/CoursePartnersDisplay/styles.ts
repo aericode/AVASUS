@@ -13,19 +13,9 @@ export const PartnerGrid = styled.div`
   gap: 30px;
 `;
 
-export const PartnerGridImage = styled.img`
-  width: 200px;
-  height: auto;
-`;
-
 export const PartnerList = styled.div`
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
-`;
-
-export const PartnerListImage = styled.img`
-  width: 240px;
-  height: auto;
 `;

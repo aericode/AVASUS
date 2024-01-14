@@ -43,7 +43,7 @@ export const DataName = styled.div`
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.BOLD};
   color: ${({ theme }) => theme.COLORS.GRAY_800};
   text-align: center;
-  margin-left: 5px;
+  margin-left: 6px;
 `
 
 export const DataDisplay = styled.div`

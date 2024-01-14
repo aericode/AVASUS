@@ -4,8 +4,28 @@ import { ContentCard } from "../ContentCard";
 import { ResponsiveFlexWrapper } from "../ResponsiveFlexWrapper";
 import { Container, DataBlock, DataDisplay, DataHeaderWrapper, DataName, StyledTitle, LineWrapper, CardPadding } from "./styles";
 import { StyledIcon } from "../StyledIcon";
-import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition, faAward, faFileArrowUp, faGraduationCap, faUser, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
+
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
+interface DataDisplayItemProps {
+  icon: IconProp,
+  dataName: string,
+  displayedData?: string
+}
+
+function DataDisplayItem({ icon, dataName, displayedData }: DataDisplayItemProps) {
+  return (
+    <DataBlock>
+      <DataHeaderWrapper>
+        <StyledIcon icon={icon} iconSize={20} />
+        <DataName>{dataName}</DataName>
+      </DataHeaderWrapper>
+      <DataDisplay>{displayedData || ''}</DataDisplay>
+    </DataBlock>
+  )
+}
 
 export function TransparencyDataDisplay() {
   const { transparenciaData } = useContext(DataContext)!;
@@ -17,56 +37,44 @@ export function TransparencyDataDisplay() {
           <StyledTitle>Dados Gerais</StyledTitle>
           <ResponsiveFlexWrapper>
             <LineWrapper>
-              <DataBlock>
-                <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} iconSize={20}/>
-                  <DataName>Total de usuários registrados</DataName>
-                </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.usuarios_registrados)}</DataDisplay>
-              </DataBlock>
-              <DataBlock>
-                <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} iconSize={20}/>
-                  <DataName>Inscrições realizadas</DataName>
-                </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.incricoes_realizadas)}</DataDisplay>
-              </DataBlock>
-              <DataBlock>
-                <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} iconSize={20}/>
-                  <DataName>Cursos ativos</DataName>
-                </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.cursos_ativos)}</DataDisplay>
-              </DataBlock>
-              <DataBlock>
-                <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} iconSize={20}/>
-                  <DataName>Direito à Certificação</DataName>
-                </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.direito_certificacao}</DataDisplay>
-              </DataBlock>
+              <DataBlock
+                icon={faUserGroup}
+                dataName={"Total de usuários registrados"}
+                displayedData={transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.usuarios_registrados)}
+              />
+              <DataBlock
+                icon={faFileArrowUp}
+                dataName={"Inscrições realizadas"}
+                displayedData={transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.incricoes_realizadas)}
+              />
+              <DataBlock
+                icon={faGraduationCap}
+                dataName={"Cursos ativos"}
+                displayedData={transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.cursos_ativos)}
+              />
+              <DataBlock
+                icon={faAward}
+                dataName={"Direito à Certificação"}
+                displayedData={transparenciaData && transparenciaData!.dados_gerais.direito_certificacao}
+              />
             </LineWrapper>
           </ResponsiveFlexWrapper>
           <ResponsiveFlexWrapper>
             <LineWrapper>
-              <DataBlock>
-                <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} iconSize={20}/>
-                  <DataName>Investimento médio por curso</DataName>
-                </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.investimento_medio_curso}</DataDisplay>
-              </DataBlock>
-              <DataBlock>
-                <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup}  iconSize={20}/>
-                  <DataName>Investimento médio por aluno</DataName>
-                </DataHeaderWrapper>
-                <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.investimento_medio_aluno}</DataDisplay>
-              </DataBlock>
+              <DataBlock
+                icon={faGraduationCap}
+                dataName={"Investimento médio por curso"}
+                displayedData={transparenciaData && transparenciaData!.dados_gerais.investimento_medio_curso}
+              />
+              <DataBlock
+                icon={faUser}
+                dataName={"Investimento médio por aluno"}
+                displayedData={transparenciaData && transparenciaData!.dados_gerais.investimento_medio_aluno}
+              />
             </LineWrapper>
           </ResponsiveFlexWrapper>
         </CardPadding>
       </ContentCard>
     </Container>
-  )
+  );
 }
