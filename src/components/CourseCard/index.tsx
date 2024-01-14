@@ -1,7 +1,7 @@
 import { faClock, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { Curso } from "../../types/curso";
 import { StarRating } from "../StarRating";
-import { Container, ImageWrapper, CourseImage, Title, Partners, IconLabel, ResumeText, IconSectionWrapper, SectionContainer, DataSectionWrapper, CourseLink, CourseLinkWrapper } from "./styles";
+import { Container, ImageWrapper, Title, Partners, IconLabel, ResumeText, IconSectionWrapper, SectionContainer, DataSectionWrapper, CourseLink, CourseLinkWrapper } from "./styles";
 import { StyledIcon } from "../StyledIcon";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
 import { useScreen } from "../../contexts/ScreenSizeContext";

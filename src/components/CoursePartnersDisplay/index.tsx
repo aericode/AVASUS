@@ -1,5 +1,5 @@
 import { Curso } from "../../types/curso"
-import { Container, PartnerGrid, PartnerGridImage, PartnerList, PartnerListImage } from "./styles";
+import { Container, PartnerList, PartnerListImage } from "./styles";
 
 interface CoursePartnersDisplayProps{
   curso:Curso

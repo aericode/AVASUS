@@ -5,19 +5,6 @@ export const Container = styled.div`
 
 `;
 
-export const PartnerGrid = styled.div`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
-  gap: 30px;
-`;
-
-export const PartnerGridImage = styled.img`
-  width: 200px;
-  height: auto;
-`;
-
 export const PartnerList = styled.div`
   display: flex;
   flex-direction: column;

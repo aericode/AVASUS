@@ -17,12 +17,7 @@ export const ImageWrapper = styled.div`
   margin: 10px;
 `;
 
-export const CourseImage = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  object-fit: contain;
-`;
+
 export const DataSectionWrapper = styled.div`
   max-width: 350px;
   padding: 0 7px;
