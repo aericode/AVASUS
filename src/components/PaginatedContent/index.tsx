@@ -6,6 +6,7 @@ import { Parceiro } from '../../types/parceiro';
 import ReactPaginate from 'react-paginate';
 import { Curso } from '../../types/curso';
 import { CourseCard } from '../CourseCard';
+import { useScreen } from '../../contexts/ScreenSizeContext';
 
 interface PaginatedContentProps {
   paginationObjectType: "parceiro"|"curso"
@@ -14,6 +15,7 @@ interface PaginatedContentProps {
 
 
 export function PaginatedContent({paginationObjectType, contentArray}: PaginatedContentProps) {
+  const { isSmallScreen } = useScreen();
 
   const itemsPerPage = 6
 
@@ -59,10 +61,10 @@ export function PaginatedContent({paginationObjectType, contentArray}: Paginated
 
         <PaginateContainer>
           <ReactPaginate
-            breakLabel={null}
+            breakLabel={isSmallScreen? null : '...'}
             nextLabel="próximo >"
             onPageChange={handlePageClick}
-            pageRangeDisplayed={4}
+            pageRangeDisplayed={isSmallScreen ? 4 : 5}
             marginPagesDisplayed={0}
             pageCount={pageCount}
             previousLabel="< anterior"
