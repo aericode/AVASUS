@@ -6,6 +6,7 @@ import { StarRating } from "../StarRating";
 import { StyledIcon } from "../StyledIcon";
 import { useScreen } from "../../contexts/ScreenSizeContext";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
+import { ImageWithSpinner } from "../ImageWithSpinner";
 
 interface FeaturedCourseProps {
   curso: Curso;
@@ -21,7 +22,7 @@ export function FeaturedCourse({ curso }: FeaturedCourseProps) {
           <Wrapper isSmallScreen={isSmallScreen}>
             <ResponsivityWrapper>
               <a href={`/vercurso/${curso?.id}` || '#'}>
-                <Thumbnail src={curso.capa} />
+                <ImageWithSpinner src={curso.capa} width={'120px'} height={'120px'} />
               </a>
               <TextWrapper>
                 <CourseTitle>
