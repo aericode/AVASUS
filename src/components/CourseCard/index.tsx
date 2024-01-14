@@ -5,6 +5,7 @@ import { Container, ImageWrapper, CourseImage, Title, Partners, IconLabel, Resum
 import { StyledIcon } from "../StyledIcon";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
 import { useScreen } from "../../contexts/ScreenSizeContext";
+import { ImageWithSpinner } from "../ImageWithSpinner";
 
 interface CourseCardProps {
   curso?: Curso
@@ -17,7 +18,7 @@ export function CourseCard({ curso }: CourseCardProps) {
     <Container isSmallScreen={isSmallScreen}>
       <a href={`/vercurso/${curso?.id}` || '#'}>
         <ImageWrapper>
-          <CourseImage src={curso?.capa || ''} />
+          <ImageWithSpinner src={curso?.capa || ''} width={'100%'} height={'auto'} />
         </ImageWrapper>
       </a>
       <DataSectionWrapper>

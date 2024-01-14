@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Container, Image, Spinner } from './styles';
+import { Container, Image } from './styles';
 import { RotatingLines } from 'react-loader-spinner';
 
 interface ImageWithSpinnerProps {
   src: string;
   width: string;
   height: string;
+
+  isImageContain?:boolean;
+  title?:string
 }
 
-export function ImageWithSpinner({ src, width, height }: ImageWithSpinnerProps) {
+export function ImageWithSpinner({ src, width, height, isImageContain, title }: ImageWithSpinnerProps) {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -37,7 +40,7 @@ export function ImageWithSpinner({ src, width, height }: ImageWithSpinnerProps) 
           ariaLabel="loading"
         />
         :
-        <Image src={src} width={width} height={height} />
+        <Image src={src} width={width} height={height}  isImageContain={isImageContain} title={title||''}/>
       }
     </Container>
   );

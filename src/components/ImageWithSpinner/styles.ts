@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export interface SizeProps{
   width: string,
-  height: string
+  height: string,
+  isImageContain?: boolean
 }
 
 
@@ -36,5 +37,5 @@ export const Image = styled.img<SizeProps>`
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   border-radius: 20px;
-  object-fit: cover;
+  object-fit: ${({ isImageContain }) => isImageContain ? 'contain' : 'cover'};
 `;
