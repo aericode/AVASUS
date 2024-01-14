@@ -33,7 +33,7 @@ export const DropdownItem = styled.li`
   cursor: pointer;
   border-bottom:  1px solid  ${({ theme }) => theme.COLORS.GRAY_150};
   text-align: center;
-  
+  padding: 3px;
 
   &:hover {
     background-color: ${({ theme }) => theme.COLORS.GRAY_50};
@@ -44,9 +44,10 @@ export const NavLink = styled.a`
 padding: 8px 12px;
   white-space: nowrap;
   text-decoration: none;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   display: block;
+  align-self: center;
 
   color:  ${({ theme }) => theme.COLORS.GRAY_250};
   size: ${({ theme }) => theme.FONT_SIZE.LG};
