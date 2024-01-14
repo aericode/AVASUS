@@ -5,7 +5,7 @@
 Certifique-se de ter o Node.js instalado em sua máquina.
 
 1. Clone este repositório:
-  git clone https://github.com/seu-usuario/seu-projeto.git
+  git clone https://github.com/aericode/Plataforma-Saude.git
 
 2. Navegue até o diretório raiz do projeto:
   cd pasta-do-projeto
