@@ -48,7 +48,7 @@ export const SeeMoreButtonWrapper = styled.div`
   align-content: center;
 `;
 
-export const SeeMoreButton = styled.button`
+export const SeeMoreButton = styled.a`
   margin-top: 60px;
 
   width: 80vw;
@@ -58,11 +58,19 @@ export const SeeMoreButton = styled.button`
   background-color: ${({ theme }) => theme.COLORS.GRAY_200};
   font-size: ${({ theme }) => theme.FONT_SIZE.XL};
   font-weight: ${({ theme }) => theme.FONT_WEIGHT.SEMIBOLD};
-  color:  ${({ theme }) => theme.COLORS.WHITE};
+  color: ${({ theme }) => theme.COLORS.WHITE};
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  height: 50px;
+  height: 30px;
+
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
 
   &:hover {
     opacity: 0.8;

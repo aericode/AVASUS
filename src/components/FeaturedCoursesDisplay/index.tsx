@@ -73,7 +73,7 @@ export function FeaturedCourseDisplay() {
         <FeaturedCourse key={index} curso={curso} />
       ))}
       <SeeMoreButtonWrapper>
-        <SeeMoreButton> Ver Mais </SeeMoreButton>
+        <SeeMoreButton href={'/cursos'}> Ver Mais </SeeMoreButton>
       </SeeMoreButtonWrapper>
     </Container>
   );
