@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../contexts/DataContext";
 import { Curso } from "../../types/curso";
-import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, BannerImage, BannerImageContainer, BannerOverlay, BannerTextWrapper, Container, CourseName, CourseText, CourseTextHeader, IconBlock, IconLabel, InfoHeader, Partners, SectionName, Wrapper } from "./styles";
+import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, BannerImage, BannerImageContainer, BannerOverlay, BannerTextWrapper, Container, CourseName, CourseText, CourseTextHeader, IconBlock, IconLabel, IconSectionWrapper, InfoHeader, Partners, SectionName, Wrapper } from "./styles";
 import { ResponsiveFlexWrapper } from "../../components/ResponsiveFlexWrapper";
 import { StyledIcon } from "../../components/StyledIcon";
 import { faCalendarCheck, faClock, faUserGroup } from "@fortawesome/free-solid-svg-icons";
@@ -51,32 +51,35 @@ export function VerCurso() {
 
       <Wrapper>
         <SectionName>Informações Gerais do Curso</SectionName>
-        <ResponsiveFlexWrapper>
-          <IconBlock>
-            <StyledIcon icon={faClock} iconSize={25} />
-            <IconLabel>{displayedCourse && displayedCourse?.duracao}</IconLabel>
-          </IconBlock>
+        <IconSectionWrapper>
 
-          <IconBlock>
-            <StyledIcon icon={faCalendarCheck} iconSize={25} />
-            <IconLabel>Desde {displayedCourse && displayedCourse?.criado_em}</IconLabel>
-          </IconBlock>
+          <ResponsiveFlexWrapper>
+            <IconBlock>
+              <StyledIcon icon={faClock} iconSize={25} />
+              <IconLabel>{displayedCourse && displayedCourse?.duracao}</IconLabel>
+            </IconBlock>
+
+            <IconBlock>
+              <StyledIcon icon={faCalendarCheck} iconSize={25} />
+              <IconLabel>Desde {displayedCourse && displayedCourse?.criado_em}</IconLabel>
+            </IconBlock>
 
 
-          <IconBlock>
-            <StyledIcon icon={faUserGroup} iconSize={25} />
-            <IconLabel>{displayedCourse && addDotsToNumber(displayedCourse?.matriculados)} alunos matriculados</IconLabel>
-          </IconBlock>
+            <IconBlock>
+              <StyledIcon icon={faUserGroup} iconSize={25} />
+              <IconLabel>{displayedCourse && addDotsToNumber(displayedCourse?.matriculados)} alunos matriculados</IconLabel>
+            </IconBlock>
 
-          <IconBlock>
-            <StarRating
-              rating={displayedCourse && displayedCourse?.avaliacao || '0'}
-              fontSize={20}
-              isBold
-            />
-            <IconLabel>({displayedCourse && addDotsToNumber(displayedCourse?.numero_avaliacoes)} avaliações)</IconLabel>
-          </IconBlock>
-        </ResponsiveFlexWrapper>
+            <IconBlock>
+              <StarRating
+                rating={displayedCourse && displayedCourse?.avaliacao || '0'}
+                fontSize={20}
+                isBold
+              />
+              <IconLabel>({displayedCourse && addDotsToNumber(displayedCourse?.numero_avaliacoes)} avaliações)</IconLabel>
+            </IconBlock>
+          </ResponsiveFlexWrapper>
+        </IconSectionWrapper>
 
 
         <InfoHeader>Sobre o Curso</InfoHeader>
@@ -110,7 +113,7 @@ export function VerCurso() {
 
         }
         <InfoHeader>Créditos</InfoHeader>
-        {displayedCourse&& <CoursePartnersDisplay curso={displayedCourse}/>}
+        {displayedCourse && <CoursePartnersDisplay curso={displayedCourse} />}
 
       </Wrapper>
 

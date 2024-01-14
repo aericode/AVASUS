@@ -92,6 +92,10 @@ export const SectionName = styled.h2`
 
 `;
 
+export const IconSectionWrapper = styled.div`
+  margin: 45px 0;
+`;
+
 export const IconBlock = styled.div`
   display: flex;
   flex-direction: row;
