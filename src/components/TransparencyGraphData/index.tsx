@@ -20,8 +20,7 @@ export function TransparencyGraphData() {
           transparenciaData.usuarios_por_curso.map((item, index) => (
             <TextContainer key={index}>
               <StyledGraphIcon icon={faCircle} color={getMarkupColor(index)}/>
-              <StyledText>{item.curso}:&nbsp;</StyledText>
-              <StyledText>{addDotsToNumber(item.usuarios)}</StyledText>
+              <StyledText>{item.curso}: {addDotsToNumber(item.usuarios)}</StyledText>
             </TextContainer>
           ))}
       </Wrapper>
