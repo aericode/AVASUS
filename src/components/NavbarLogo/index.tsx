@@ -7,7 +7,7 @@ import { useScreen } from '../../contexts/ScreenSizeContext';
 export function NavbarLogo() {
   const { isSmallScreen } = useScreen();
   return (
-    <LogoContainer href="#">
+    <LogoContainer href="/">
       {isSmallScreen ?
         <SmallLogoImage src={logoSmall} alt="Logo AVASUS" />
         :
