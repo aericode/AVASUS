@@ -8,7 +8,7 @@ export function FooterLinks() {
 
   return (
     <Container>
-      <Wrapper isSmallScreen = {isSmallScreen}>
+      <Wrapper isSmallScreen={isSmallScreen}>
         <Section>
           <LogoLAIS src={logoLAIS} />
           <TextLais>
@@ -38,9 +38,15 @@ export function FooterLinks() {
         <Section>
           <StyledHeader>Redes Sociais</StyledHeader>
           <SocialLinkContainer>
-            <StyledFontAwesomeIcon icon={faFacebookF} />
-            <StyledFontAwesomeIcon icon={faTwitter} />
-            <StyledFontAwesomeIcon icon={faInstagram} />
+            <a href="https://www.facebook.com/LAIS.HUOL">
+              <StyledFontAwesomeIcon icon={faFacebookF} />
+            </a>
+            <a href="https://twitter.com/laishuol">
+              <StyledFontAwesomeIcon icon={faTwitter} />
+            </a>
+            <a href="https://www.instagram.com/laishuol">
+              <StyledFontAwesomeIcon icon={faInstagram} />
+            </a>
           </SocialLinkContainer>
         </Section>
       </Wrapper>
