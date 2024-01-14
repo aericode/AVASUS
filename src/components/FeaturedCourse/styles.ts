@@ -22,6 +22,7 @@ flex-direction: row;
 width: max-content;
 `
 
+
 export const Thumbnail = styled.img`
    width: 120px;
   height: 120px;

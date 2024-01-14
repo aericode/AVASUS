@@ -19,28 +19,28 @@ export function TransparencyDataDisplay() {
             <LineWrapper>
               <DataBlock>
                 <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} />
+                  <StyledIcon icon={faUserGroup} iconSize={20}/>
                   <DataName>Total de usuários registrados</DataName>
                 </DataHeaderWrapper>
                 <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.usuarios_registrados)}</DataDisplay>
               </DataBlock>
               <DataBlock>
                 <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} />
+                  <StyledIcon icon={faUserGroup} iconSize={20}/>
                   <DataName>Inscrições realizadas</DataName>
                 </DataHeaderWrapper>
                 <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.incricoes_realizadas)}</DataDisplay>
               </DataBlock>
               <DataBlock>
                 <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} />
+                  <StyledIcon icon={faUserGroup} iconSize={20}/>
                   <DataName>Cursos ativos</DataName>
                 </DataHeaderWrapper>
                 <DataDisplay>{transparenciaData && addDotsToNumber(transparenciaData!.dados_gerais.cursos_ativos)}</DataDisplay>
               </DataBlock>
               <DataBlock>
                 <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} />
+                  <StyledIcon icon={faUserGroup} iconSize={20}/>
                   <DataName>Direito à Certificação</DataName>
                 </DataHeaderWrapper>
                 <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.direito_certificacao}</DataDisplay>
@@ -51,14 +51,14 @@ export function TransparencyDataDisplay() {
             <LineWrapper>
               <DataBlock>
                 <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} />
+                  <StyledIcon icon={faUserGroup} iconSize={20}/>
                   <DataName>Investimento médio por curso</DataName>
                 </DataHeaderWrapper>
                 <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.investimento_medio_curso}</DataDisplay>
               </DataBlock>
               <DataBlock>
                 <DataHeaderWrapper>
-                  <StyledIcon icon={faUserGroup} />
+                  <StyledIcon icon={faUserGroup}  iconSize={20}/>
                   <DataName>Investimento médio por aluno</DataName>
                 </DataHeaderWrapper>
                 <DataDisplay>{transparenciaData && transparenciaData!.dados_gerais.investimento_medio_aluno}</DataDisplay>
