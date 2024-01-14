@@ -5,7 +5,7 @@ import { Curso } from "../../types/curso";
 import { BannerBreadcrumbCourseName, BannerBreadcrumbRoot, BannerImage, BannerImageContainer, BannerOverlay, BannerTextWrapper, Container, CourseName, CourseText, CourseTextHeader, IconBlock, IconLabel, InfoHeader, Partners, SectionName, Wrapper } from "./styles";
 import { ResponsiveFlexWrapper } from "../../components/ResponsiveFlexWrapper";
 import { StyledIcon } from "../../components/StyledIcon";
-import { faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { faCalendarCheck, faClock, faUserGroup } from "@fortawesome/free-solid-svg-icons";
 import { StarRating } from "../../components/StarRating";
 import { addDotsToNumber } from "../../utils/addDotsToNumber";
 import { CoursePartnersDisplay } from "../../components/CoursePartnersDisplay";
@@ -53,12 +53,12 @@ export function VerCurso() {
         <SectionName>Informações Gerais do Curso</SectionName>
         <ResponsiveFlexWrapper>
           <IconBlock>
-            <StyledIcon icon={faUserGroup} iconSize={25} />
+            <StyledIcon icon={faClock} iconSize={25} />
             <IconLabel>{displayedCourse && displayedCourse?.duracao}</IconLabel>
           </IconBlock>
 
           <IconBlock>
-            <StyledIcon icon={faUserGroup} iconSize={25} />
+            <StyledIcon icon={faCalendarCheck} iconSize={25} />
             <IconLabel>Desde {displayedCourse && displayedCourse?.criado_em}</IconLabel>
           </IconBlock>
 
