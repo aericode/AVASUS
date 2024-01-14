@@ -17,13 +17,34 @@ export const StyledHeader = styled.h2`
   margin-bottom: 30px;
 `
 
+export const PartnerSectionWrapper = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 10px;
+
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+`
+
+
 export const PartnerBlock = styled.div`
   display: flex;
   flex-direction: column;
+
   max-width: 242px;
   margin: 20px 26px;
   
   align-self: flex-start;
+
 `
 
 export const PartnerTitle = styled.h3`

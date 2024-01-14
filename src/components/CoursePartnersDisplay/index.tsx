@@ -1,6 +1,4 @@
-import { useScreen } from "../../contexts/ScreenSizeContext";
 import { Curso } from "../../types/curso"
-import { ImageWithSpinner } from "../ImageWithSpinner";
 import { Container, PartnerGrid, PartnerGridImage, PartnerList, PartnerListImage } from "./styles";
 
 interface CoursePartnersDisplayProps{

@@ -1,6 +1,6 @@
 import { ContentCard } from "../ContentCard";
 import { ResponsiveFlexWrapper } from "../ResponsiveFlexWrapper";
-import { Container, PartnerBlock, PartnerName, PartnerTitle, StyledHeader } from "./styles";
+import { Container, PartnerBlock, PartnerName, PartnerSectionWrapper, PartnerTitle, StyledHeader } from "./styles";
 
 interface PartnerDisplayBlockProps {
   partnerTitle: string,
@@ -25,7 +25,7 @@ export function MainMenuPartnersDisplay() {
       <StyledHeader>Parceiros</StyledHeader>
 
       <ContentCard>
-        <ResponsiveFlexWrapper>
+        <PartnerSectionWrapper>
           <PartnerDisplayBlock
             partnerTitle={"Governo do RN"}
             partnerName={"Governo do Estado do Rio Grande do Norte."}
@@ -42,7 +42,7 @@ export function MainMenuPartnersDisplay() {
             partnerTitle={"HUOL"}
             partnerName={"Hospital Onofre Lopes: Hospital Universitário da UFRN (Universidade Federal do Rio Grande do Norte)."}
           />
-        </ResponsiveFlexWrapper>
+        </PartnerSectionWrapper>
       </ContentCard>
     </Container>
   )
