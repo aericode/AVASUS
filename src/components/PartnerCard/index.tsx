@@ -1,6 +1,6 @@
 import { Parceiro } from "../../types/parceiro";
 import { ImageWithSpinner } from "../ImageWithSpinner";
-import { Container, ImageWrapper, PartnerImage, PartnerName } from "./styles";
+import { Container, ImageWrapper, PartnerName } from "./styles";
 
 interface PartnerCardProps {
   parceiro?: Parceiro

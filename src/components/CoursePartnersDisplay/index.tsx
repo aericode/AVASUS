@@ -8,19 +8,13 @@ interface CoursePartnersDisplayProps{
 }
 
 export function CoursePartnersDisplay({curso}:CoursePartnersDisplayProps){
-  const { isSmallScreen } = useScreen();
 
   return(
     <Container>
-      {isSmallScreen ?
       <PartnerList>
         {curso.creditos.map(partner=> <PartnerListImage width={"200px"}  height={"auto"} src={partner.capa} title={partner.titulo} />)}
       </PartnerList>
-      :
-      <PartnerGrid>
-        {curso.creditos.map(partner=> <ImageWithSpinner width={"240px"}  height={"auto"} src={partner.capa} title={partner.titulo} isImageContain={true}/>)}
-      </PartnerGrid>
-      }
+      
     </Container>
     
   )
